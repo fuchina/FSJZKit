@@ -18,115 +18,6 @@
 
 @implementation FSDBSupport
 
-+ (void)writeData:(NSString *)path list:(NSArray *)list table:(NSString *)table{
-    for (NSDictionary *dic in list) {
-        NSMutableString *unit = [[NSMutableString alloc] init];
-        NSArray *keys = [dic allKeys];
-        for (NSString *key in keys) {
-            NSString *value = dic[key];
-            NSString *str = [self visionString:table key:key value:value];
-            [unit appendFormat:@"\n%@",str];
-        }
-        [unit appendString:@"\n\n"];
-        [FSFile wirteToFile:path content:unit];
-    }
-}
-
-+ (NSString *)visionString:(NSString *)table key:(NSString *)key value:(NSString *)value{
-    if ([key isEqualToString:@"aid"]) {
-        return [[NSString alloc] initWithFormat:@"序号：%@",value];
-    }
-    if ([key isEqualToString:@"time"]) {
-        return [[NSString alloc] initWithFormat:@"时间：%@",[FSKit ymdhsByTimeIntervalString:value]];
-    }
-    if ([table isEqualToString:_tb_contact]) { // FSContactModel
-        if ([key isEqualToString:@"name"]){
-            return [[NSString alloc] initWithFormat:@"名字：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"phone"]){
-            return [[NSString alloc] initWithFormat:@"手机：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"type"]){
-            return [[NSString alloc] initWithFormat:@"类型：%@",value];
-        }
-    }else if ([table isEqualToString:_tb_password]){    // FSPwdBookModel
-        if ([key isEqualToString:@"name"]){
-            return [[NSString alloc] initWithFormat:@"名字：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"login"]){
-            return [[NSString alloc] initWithFormat:@"帐号：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"pwd"]){
-            return [[NSString alloc] initWithFormat:@"密码：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"phone"]){
-            return [[NSString alloc] initWithFormat:@"手机：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"mail"]){
-            return [[NSString alloc] initWithFormat:@"邮箱：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"note"]){
-            return [[NSString alloc] initWithFormat:@"备注：%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"zone"]){
-            return [[NSString alloc] initWithFormat:@"组名：%@",value];
-        }
-    }else if ([table isEqualToString:_tb_diary]){   // FSDiaryModel
-        if ([key isEqualToString:@"content"]){
-            return [[NSString alloc] initWithFormat:@"%@",[FSCryptorSupport aes256DecryptString:value]];
-        }else if ([key isEqualToString:@"zone"]){
-            return [[NSString alloc] initWithFormat:@"类型：%@",value];
-        }
-    }
-    return nil;
-}
-
-+ (NSMutableArray *)canExportTables{
-    NSMutableArray *list = [[NSMutableArray alloc] initWithArray:@[_tb_contact,_tb_password,_tb_diary,_tb_abTrack,_tb_birth,_tb_location,_tb_alert]];
-    NSArray *accounts = [self allAccounts];
-    for (NSDictionary *dic in accounts) {
-        [list addObject:dic[@"tb"]];
-    }
-    return list;
-}
-
-+ (Tuple2 *)nameOfTable:(NSString *)table{
-    if (!_fs_isValidateString(table)) {
-        return nil;
-    }
-    NSDictionary *maps = [self nameMapTable];
-    NSArray *keys = [maps allKeys];
-    if ([keys containsObject:table]) {
-        return [Tuple2 v1:maps[table] v2:@(NO)];
-    }
-    FSDBMaster *master = [FSDBMaster sharedInstance];
-    NSString *sql = [[NSString alloc] initWithFormat:@"SELECT name FROM %@ WHERE tb = '%@';",_tb_abname,table];
-    NSArray *list = [master querySQL:sql tableName:table];
-    if (list.count) {
-        NSDictionary *dic = list.firstObject;
-        NSString *name = dic[@"name"];
-        if (_fs_isValidateString(name)) {
-            return [Tuple2 v1:name v2:@(YES)];
-        }
-    }
-    return nil;
-}
-
-+ (NSDictionary *)nameMapTable{
-    static NSDictionary *dic = nil;
-    if (!dic) {
-        dic = @{
-                _tb_contact:@"通讯录",
-                _tb_password:@"密码",
-                _tb_diary:@"日记",
-                _tb_abTrack:@"账减记录",
-                _tb_location:@"地址",
-                _tb_birth:@"生日",
-                _tb_alert:@"提醒",
-                };
-    }
-    return dic;
-}
-
-+ (NSArray *)allAccounts{
-    FSDBMaster *master = [FSDBMaster sharedInstance];
-    NSString *sql = [[NSString alloc] initWithFormat:@"SELECT tb FROM %@",_tb_abname];
-    NSArray *list = [master querySQL:sql tableName:_tb_abname];
-    return list;
-}
-
 + (NSMutableArray *)querySQL:(NSString *)sql class:(Class)cname tableName:(NSString *)tableName{
     FSDBMaster *master = [FSDBMaster sharedInstance];
     NSMutableArray *list = [master querySQL:sql tableName:tableName];
@@ -153,20 +44,6 @@
         }
     }
     return models.count?models:nil;
-}
-
-+ (NSArray *)from{
-    NSString *str = [[NSString alloc] initWithContentsOfFile:@"/Users/fudonfuchina/Desktop/what.txt" encoding:NSUTF8StringEncoding error:nil];
-    return [str componentsSeparatedByString:@" "];
-}
-
-+ (NSString *)sqlOfPassword:(NSInteger)index{
-    return [[NSString alloc] initWithFormat:@"SELECT * FROM %@ order by time DESC limit %@,1;",_tb_password,@(index)];
-}
-
-+ (NSString *)timeStr{
-    NSString *time = [FSDate stringWithDate:[NSDate date] formatter:@"yyyyMMddHHmmss"];
-    return time;
 }
 
 // @[Tuple2:year + @[Tuple3:date + sr + cb]]
@@ -312,10 +189,6 @@
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:((start + end) / 2)];
     Tuple3 *t3 = [Tuple3 v1:date v2:@(sr).stringValue v3:@(cb).stringValue];
     return t3;
-}
-
-+ (NSString *)sqlOfContact:(NSInteger)index{
-    return [[NSString alloc] initWithFormat:@"SELECT * FROM %@ order by time DESC limit %@,1;",_tb_contact,@(index)];
 }
 
 + (NSString *)addField:(NSString *)field defaultValue:(NSString *)value toTable:(NSString *)table{

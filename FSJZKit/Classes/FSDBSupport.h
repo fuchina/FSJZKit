@@ -15,11 +15,6 @@
 + (NSMutableArray *)querySQL:(NSString *)sql class:(Class)cname tableName:(NSString *)tableName;
 + (NSMutableArray *)querySQL:(NSString *)sql class:(Class)cname tableName:(NSString *)tableName eachCallback:(void(^)(id model))preCount;
 
-+ (NSMutableArray *)canExportTables;
-
-// t1:名字，t2：@(YES/NO)是否为账本
-+ (Tuple2 *)nameOfTable:(NSString *)table;
-
 // 查输入当年【含】与前一年共两年
 + (NSArray<Tuple2<NSString *,NSArray<Tuple3 *> *> *> *)incomesAndcostsByMonth:(NSInteger)year table:(NSString *)table first:(NSTimeInterval)first;
 
