@@ -1,0 +1,8 @@
+platform:ios,'8.2'
+
+target 'FSJZKitSample' do
+
+  pod 'FSJZKit', :path => '../'
+
+end
+
