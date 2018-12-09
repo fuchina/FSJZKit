@@ -9,6 +9,8 @@
 #ifndef FSTrackKeys_h
 #define FSTrackKeys_h
 
+#import "FSTrack.h"
+
 #pragma mark    UMeng_Event
 static NSString *_UMeng_Event_start         = @"start";             // 启动
 static NSString *_UMeng_Event_savesql       = @"savesql";           // 保存数据

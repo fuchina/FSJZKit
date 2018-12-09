@@ -13,6 +13,7 @@
 #import "UIViewExt.h"
 #import "FSToast.h"
 #import "FuSoft.h"
+#import "FSKitDuty.h"
 
 /**********************************************************************************************/
 
