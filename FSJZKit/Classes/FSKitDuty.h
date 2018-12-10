@@ -34,6 +34,4 @@
 
 NSComparisonResult _fs_highAccuracy_compare(NSString *a,NSString *b);
 
-+ (NSArray*)sortForResults:(NSMutableArray *)list;
-
 @end

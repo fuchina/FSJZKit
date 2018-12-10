@@ -97,16 +97,4 @@ NSComparisonResult _fs_highAccuracy_compare(NSString *a,NSString *b){
     return result;
 }
 
-// 排序
-//+ (NSArray<FSBestAccountModel *> *)sortForResults:(NSMutableArray<FSBestAccountModel *> *)list{
-//    [list sortUsingComparator:^NSComparisonResult(FSBestAccountModel *obj1, FSBestAccountModel *obj2) {
-//        if (obj1.selectedTime > obj2.selectedTime) {
-//            return NSOrderedDescending;
-//        }else{
-//            return NSOrderedAscending;
-//        }
-//    }];
-//    return list;
-//}
-
 @end
