@@ -28,7 +28,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0039599B15CF37720259F3EBE2279907 /* FSAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60F8AF78BA1EA9D5DB1284C7ED5BA3 /* FSAppConfig.m */; };
 		00702626FCB45A0F60EF933225424295 /* FSCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A01BCEB5A9F509ACB0EBC6A57DDB00 /* FSCalculator.m */; };
 		01930A67E148C37F6DD1506C8086C79A /* FSReuseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9611E3821D5A917D700547E30D93B /* FSReuseTableView.m */; };
 		02FC34BEC3193CAADC4E1A6D32D4815F /* FSTuple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 761D29DFBD0E79AC1E9E278026E3E8FB /* FSTuple-dummy.m */; };
@@ -42,7 +41,6 @@
 		0BAA63B2F6EAAD7AFFC6FD5886ADA346 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C880D22C0CE7F2F5C7AFBAF762FA542D /* MJRefreshBackFooter.m */; };
 		0BC3D17AFE1A5CCB39E7395EA3EE3A78 /* FSTrack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E0E3398291B9ADDB065B3942045865 /* FSTrack-dummy.m */; };
 		1253FFFC19F7E77F8B075CBF4817A96A /* MJRefreshGifHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6BF0A749769F18749D62C7FE68FC02 /* MJRefreshGifHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		144A725514D54AC65A5FEA969BCFE323 /* FSDBBaseGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44911628F936715DC83D09CA56579F34 /* FSDBBaseGroupModel.m */; };
 		163C2887F41628D5F8D227B46C912704 /* FSShopClassView.h in Headers */ = {isa = PBXBuildFile; fileRef = E55E528919DAAC731222415E8259F90C /* FSShopClassView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1816B6BDAC0E667185D033638CD07BD0 /* FSConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF718AFFA90F18DED4D94336654B3CD /* FSConstant.m */; };
 		18D1EEDE8B07D4F0849786059B014C99 /* FSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB813EA419D4E4B04DBF9E627118E20 /* FSWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -53,33 +51,31 @@
 		1D600F85588B7458E4CAAF43D8B945FA /* FSDBMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 34885C730412B1E8D322139E5293839A /* FSDBMaster.m */; };
 		1D6EEACAC1C3C3C4120FC81B3F8D3D24 /* FSToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2709DEC1148CE5918D905FE3380E83 /* FSToast-dummy.m */; };
 		1DC31763E4B02D9F18CB6B292651CAEC /* MJRefreshFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = FC2F5F739A5525AD8B3B63E36657C443 /* MJRefreshFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1E23A5D87AAA9AE962C3BB34127007A0 /* FSDBGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0B169995AA7830E4A972096644A25 /* FSDBGroupModel.m */; };
 		20BF2B1F8C2A8FA1E1CDF2976D22DEB5 /* FSUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 91AF08D553BB6B3405919AD12A142368 /* FSUIKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		20D2252878D59AE5B91DDD76BE666EE2 /* FSShopClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCF747B79B0D5EC2D66B485887CD5E /* FSShopClassView.m */; };
+		21E2656CE03586F22547A52420CAB740 /* FSDBGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B727B38AD1E7893DB5BA332A9E5C54 /* FSDBGroupModel.m */; };
 		26D35A4AA6371F3FE3A7BBC1AF90718D /* FSRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC4F6D5D83A2151651E212258308A67 /* FSRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2747EB543EDCE106FA6D71D8CF9BD5C2 /* FSDBBaseGroupModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7441E49AE896E4B1A6B8460EA8A997FB /* FSDBBaseGroupModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		27C92BC8346C4B06AF5BABA7C099AB09 /* FSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E18DDDB55B2E6B8D580922273C66978B /* FSLabel.m */; };
+		2853C14F74742767A2037E41BB0D45D0 /* FSAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D3C88CB4CBD32B78FB888338F0E12 /* FSAppConfig.m */; };
 		2AB77E9F494CEF678A8D6C9ABCE0A3F9 /* FSAVKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCFA6FCCDDDE58C813AAAAAAF6A4133 /* FSAVKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2B693432FE7CD480322A7AED8C424FE2 /* FSAccountRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E3DAC99CA4EFF76FE72047BEA60255 /* FSAccountRecordController.m */; };
 		2B850637FE7B0C120662C2E41C36514C /* Pods-FSJZKitSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B758D962117EE03EC893871028D8CE /* Pods-FSJZKitSample-dummy.m */; };
 		2E5389F3EB045165337E99CDF8F1147C /* NSBundle+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B5629A347F60CAEFD24898A2A41272 /* NSBundle+MJRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2E89E9A773FEEDA6BF45AA6DE65A96D2 /* FSAppConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E63B2D0671269E213F7CDC8F3FC8EE58 /* FSAppConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2EADB9A4A23E292EDC35EEF8441DE99E /* FSAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FE4A4B12B49FB1C5CB9C8F92D163FFE /* FSAlgorithm.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		32374FD98F89C9D81089318765F9B9CC /* FSPdf.h in Headers */ = {isa = PBXBuildFile; fileRef = 629BD4CDD16C4083887303A0E96D50B3 /* FSPdf.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		348D4224AF23D248385FEAA5F9C79AE7 /* MJRefreshBackStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = BC1FCFFD6DEBAD2190B3AE725EEBFCC3 /* MJRefreshBackStateFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		34CF7DEE39E85649FE3E3D752ECA099A /* FSTapCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C38AC73E1F2A19E498B95265DB71A7 /* FSTapCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		369B8B0C63FBA7F31F35D49D342754B1 /* FSFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 83255992A45163B18357768FF750B72B /* FSFile.m */; };
 		385C6C2C94E7EBE20E09118B958161AD /* MJRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F282B97F447F47C259DE74AA1C929DE7 /* MJRefresh-dummy.m */; };
-		397D1E0A0739888B80A9C8E8EDC0E4AB /* FSAPP.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E9C762CBC3AC35B234F4838529366E /* FSAPP.m */; };
 		3A7348F0645B73F263D4A6C2005E449F /* FSTapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF435DE3880AD9BFA71DBB8BAEB30B /* FSTapCell.m */; };
-		3C5BC215C26767A978ECEF7F3B7E4D1F /* FSAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E077D2F15704AE219321AA852A7D6A /* FSAppModel.m */; };
 		3CAF541DC5F3AD37AE1429204000ADA5 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DB559F86BE2C3DDE4ACCF43B636A58 /* GTMDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3D1601488B48CCE753866FB2C5D0AA84 /* FSTapScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03864E74CCD92BB0DF2F7DD525997A56 /* FSTapScrollView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3DD62D451CC275B98EB757F0CC336512 /* FSUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 875BCEC4848D2F256466AFA0B9B5BF3E /* FSUIKit.m */; };
-		3EB826FCF15E08527EF10A10B4D7F161 /* FSDBSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 23CC2169A25F6981651830F4964B5BCF /* FSDBSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3FA35082B2763688D45031BB3DB600D5 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7E1BF03B000C53667327157985146C /* MJRefreshStateHeader.m */; };
-		422F0CF28876DFAC82D37C9BB1688D3F /* FSCryptorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 072524C190131328467D87E16E36D4F8 /* FSCryptorSupport.m */; };
 		45727CDF6663359E6DD3AB3DB638521D /* MJRefreshBackGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E183E8804A26B4EE8EC1913129B0C2 /* MJRefreshBackGifFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		471DF15D3E50A1F03016417EA608B94F /* FSAppModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9971C63DDF9382BA0B2993DEB19A3F55 /* FSAppModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		47E44A11E8C50CBA51715AB308DA3344 /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A720C98C2E06721FCD703B70EF69C /* MJRefreshAutoStateFooter.m */; };
+		4803CE3A458DAEAB9C9A8A5CC3975CF2 /* FSTrackKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 331619F78244335474A2305C102B7476 /* FSTrackKeys.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		498D5E647F466A534EB7E99CD5744C7E /* FSLocalNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = F749221333D2762FF5F9A91C8F02EA43 /* FSLocalNotification.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4B215B60BD3078391ECA2A988195DB9E /* FSFile.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E2C98971223E6EC4A1D75183669338 /* FSFile.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4C34C41AAE9EA97FEE2551B7D8878D94 /* FSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3313A4A6FBF80BF421686FCF6757BB9D /* FSDatePickerView.m */; };
@@ -92,43 +88,49 @@
 		53EC3D173B0349EEBDC31E4D787B5F4D /* RSA.h in Headers */ = {isa = PBXBuildFile; fileRef = F715FE683E0A4AC8F9D7CF03485944CE /* RSA.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		54DF29F24673A4C10A827672C57E0C2C /* FSTitleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AA73FF74F091D312A2A39CC27F7049 /* FSTitleContentView.m */; };
 		557A1918B0197D2A43F425617D63C3F9 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F9356D054574F39AA7A91B399C1F18 /* GTMBase64.m */; };
+		55C0D1EFCF5CBDFBAB65BE42C88555FE /* FSDBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D02B22BC440D4212579057B082BE714D /* FSDBSupport.m */; };
 		55DA330DC3D3F36BC786A8691D61915A /* FSCalculator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C18315C374F836FC8D2E71B8F70D6 /* FSCalculator-dummy.m */; };
 		590F242BDF1079F21707E40022AE47D4 /* FSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9213D2F1BBBCE051F2CE99884C408F95 /* FSDate.m */; };
 		5919D9146F1D067D0B145276DC557DD2 /* FSDBJeView.h in Headers */ = {isa = PBXBuildFile; fileRef = A43671DE372DA852DC69C298CAF1FF8C /* FSDBJeView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5A1D33EC7890FD037DB697C889A371E6 /* FSBaseController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7666E3F8C21A75E057BE828933E215C /* FSBaseController-dummy.m */; };
+		5DDE593129C5A9B21CDDCFE0677B79C9 /* FSKitDuty.h in Headers */ = {isa = PBXBuildFile; fileRef = DADF0C9E0EC6F8F96E40D4520A8ECD0B /* FSKitDuty.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6003A0E0F839A330D90CA1BCF4E6DEAC /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EB323F25843453DBAE087482A51B9 /* MJRefreshBackStateFooter.m */; };
 		602A8C7A5111A9356A5CC668A3B26965 /* FSTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FBB849F32A4BE86EAFD1924911E2F0 /* FSTuple.m */; };
 		625FBE2C979FD84B4A8A930AB699D3B4 /* FSAVKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E8E494C6BDC2DD84EE3CBB87F34DD9 /* FSAVKit.m */; };
-		640866325ADA02028FA6394BD4D90BFC /* FSDBGroupModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 75AE9C01532415982D354AFD42F1A214 /* FSDBGroupModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		654E8DC90C746F44D96ACE9C965A56A5 /* FSAppConfigModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7A19479E78031A06A3C475E9767411 /* FSAppConfigModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6469A3F4C13DD6521A9BCCDF3F533B9E /* FSAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD7CBB4C86BEC2EB2B9CCB77476806 /* FSAppModel.m */; };
 		6592E1042FE08BCC4A3B9F44FF6F937A /* FSTapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2409BB36286EF404004140707114B65C /* FSTapLabel.m */; };
-		66FE691353F0417EBA53DA92BC4BFAF8 /* FSKitDuty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1AE1D48490894C1BBF6FFA24545F72 /* FSKitDuty.m */; };
 		6992B07C07A42720FD9B99FAA28EF94F /* FSShare.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B51CCB1C048E715AB8BB9896A919C5 /* FSShare.m */; };
 		6ADC4DD19751E33442DFD9E161A1709F /* FSVanView.h in Headers */ = {isa = PBXBuildFile; fileRef = 70AFE6731C65EB84DFB92BD667926F69 /* FSVanView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6CA538209B5DEBDFC7B306555CE7AF34 /* FSDBGroupAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 00532F83A1F8B15CD9F18EEF7E5CC994 /* FSDBGroupAPI.m */; };
+		6DD2909D579FB56643BCD553EEB0C125 /* FSDBBaseGroupModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE9631E22F32B7669E6674EA0AD3F42 /* FSDBBaseGroupModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6E78402CB37EA5BE7ACC818DF7A16F7D /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AAE2F186D770C384E5A6A129E6978D /* MJRefreshNormalHeader.m */; };
 		6F0A05E82413CA1EB72749D6EC18464F /* FSToast.h in Headers */ = {isa = PBXBuildFile; fileRef = E3370C8FDBF4EE028E96C98DD3E50535 /* FSToast.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6FFA79060928990AE56FF4693C405BD3 /* FSTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B3F24B548830DAFD9D34ED9B1DAF0BC /* FSTextViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		72E9F25FD44CE32661B23F38D25AF6C5 /* FSCommonGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919A1690B1CA4B48DF03B7761AF9F75A /* FSCommonGroupController.m */; };
 		739F4F82F83B1BB89A481B8EBA735BE2 /* FSViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DC427184C3C92AFADB8756B1AC4ABB /* FSViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		73F87ADA31D713741A5035678E2053F0 /* FSAppConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2417A87DF08B09F75BD3B2BA04FE828 /* FSAppConfigModel.m */; };
+		744B35F1317C91DD3A887B5741F9C2A0 /* FSDBSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B480ABB155325C9AD4AB1A56C952B3D /* FSDBSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		75750C5C9BF27BC81450612A83893179 /* FSDBMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 81BD113FEFC1BC479ECD2CDE13F4D2E7 /* FSDBMaster.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		771F7443561AE6C1A72893AEF719DF38 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD94079829CAD46102350866262D649 /* Reachability.m */; };
 		7773010CFB7D0C5820865F2C41F23B62 /* FSTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFA9AAA1136D625C2BA409B78E48BB9 /* FSTrack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		793CB691FF5073C451A0A9271F75C5CE /* AppConfiger.h in Headers */ = {isa = PBXBuildFile; fileRef = 269EDF164D6E3DF393025B9CF23BA709 /* AppConfiger.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7B2BB6C7C00995B3FD3AB35619675FB9 /* PHTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = B89C9D7CD8001A4AD50682405252B5BE /* PHTextView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7BA21FACC424E8589EE892F8797DE70F /* FSAPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 28887B410ABFA725B6C5B4EB899A0F43 /* FSAPP.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7C35E6739456CD4B51E7B59AAA114560 /* FSDBGroupModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4819739C3798866C447B163ACD1A3C18 /* FSDBGroupModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7C86ED19FB89EAC81FAAA9B53B2B5C25 /* FSCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 00840B472D94C3E72E78D9D4A0E9D120 /* FSCalculator.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7D92F83B1D368EC4773C6D273D94A36D /* FSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555F8E366992BBF00B78421128C70A2 /* FSHook.m */; };
 		80CB91078FC473D36E2EF4B84E4022EC /* FSVanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 735A14180C7410C14172EFF26F15F79C /* FSVanView.m */; };
+		811C18E52A68AB10118F13A19C23DD8B /* FSAPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2C3B14CC997B385C55584970FCFE8 /* FSAPP.m */; };
 		84D8D1679EAD3FB29AB43FB8830AE42E /* FSCryptor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217ADDC16A94E79590D2FD955F35CA8 /* FSCryptor-dummy.m */; };
 		85461CCAD1EF295C823905F80E2D226C /* FSConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6C3681B9A18EA2601FE4EE4FEB2C8A /* FSConstant.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8657857BFD39BCC697965B1FC0FA6FEB /* FSJZKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 826C491E76EC6BA030EF5583EA142CE7 /* FSJZKit-dummy.m */; };
 		87792730297C506A3FE2BBD851FBAD23 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A89C04B9E94E45E8B6C75EB67D879A /* MJRefreshBackGifFooter.m */; };
+		87B817102486EF0B462DBFA37F91181E /* FSDBGroupAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5ECA07ECBA69530F241B6EF5F043C7 /* FSDBGroupAPI.m */; };
 		8F7EA0C6ABF6E2C44F86E9A138C17D1C /* FSKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 93ECFB5F19C484F3410731FC2C43C761 /* FSKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8F83D8BC539F18B9BEC4AE03384161DF /* MJRefreshHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 27175991FA796FAC628B9B670C5EA2A8 /* MJRefreshHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9019D667BFF92CF7E5C996175E891261 /* FSHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 56279A56332D2E1467DC79CEDA340130 /* FSHook.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		907692D88481AF23F5288951C1B54058 /* FSAPP.h in Headers */ = {isa = PBXBuildFile; fileRef = E83D0B1831B205EF3B92930D4685A073 /* FSAPP.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		92836C3FAF950EBBB8A77E2C842FF0A9 /* MJRefreshAutoStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = CC48C74DC4A4DEE42E7FCCFC60D53A20 /* MJRefreshAutoStateFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9456F57E12CFFB55DA520986AFEC53E1 /* FSCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 687463E30B17376BDDECD1A67290472E /* FSCryptor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		95D395F53545910D3F0A4BAD0349BF83 /* FSTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D243B1D04746C4DC9069181ABF3DC51 /* FSTextViewController.m */; };
 		96A5C165791D97645B7C08BE5F5C290D /* FSTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = DA302D0FDE21469960846CD1214D3207 /* FSTuple.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9817261896C390A0347D713C11228CEC /* FSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B92048DC83F84CA5D2542CB990661 /* FSReachability.m */; };
 		98A5E3823AF23649F67834B2B74C6592 /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 986A4E334D9E67C6A5537EB3265CF652 /* MJRefreshAutoGifFooter.m */; };
 		991B6E07644693900DC35D2992C9C49E /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA14DDE40DB3F2C3089B1D58FA48DD /* MJRefreshGifHeader.m */; };
 		9A96FDA712A835A50043231DE0D025E6 /* FSTapLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F78B0196110D4BD2A4D16F054CB0EE8 /* FSTapLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -138,18 +140,14 @@
 		A09B6450F52ED710B5565723751503CA /* FSLabelTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = BCBF8C7BCFF83CAB4F6F8E2C54543CDE /* FSLabelTextField.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A17E0C7FDBD89BA310386AC453CAF73B /* MJRefreshBackFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EFE0F9CDAE960FBA958B923513FBC9A /* MJRefreshBackFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A2044429040F61837E77CDEACB0EC927 /* FSWindow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E4EC723FB4FFFD7DD2C8E36A6CD36 /* FSWindow-dummy.m */; };
-		A2BA22956CF5B05E248E3BA1A917D0E2 /* FSDBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEAA00DFB7ED55ACB43285CE6C1BF22 /* FSDBSupport.m */; };
 		A41B87EE215D951F4D1EE20B16A1C287 /* UIView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 499CD06C8AE4B042CF051EADDF3DA5E3 /* UIView+MJExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A45DBBADFD45920294F87CC5DF97986A /* FSLeftItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D670B6D5185E7B7FE986A7319E2C26 /* FSLeftItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A5292C5FB7046EE020B2011AE21935F3 /* FuSoft.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CE9F8CF60636C4969B4526865CB5F3 /* FuSoft.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A60A0F2BD49760C6FFC8942C1E34A8AB /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D88E68D92B56B7EDAABE4FF41AFC5ECD /* Reachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A65F13A3B2C37CEFC8B5E919AE88CC05 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C2B2BE4CB895D9240C51DECDCE8FB8 /* UIViewExt.m */; };
 		A7C65D400E9CBBD3E550697F5E1FC491 /* FSShakeBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A2F9BF4A1A64F907737FFB962BC6B /* FSShakeBaseController.m */; };
 		A86B22B987658FFC52A406EBED5C29F3 /* FSShakeBaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EB485009F317CB8AB7246B668F1414 /* FSShakeBaseController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A930B06A255D7682186AE6CA6216C867 /* FSAppModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 597AB6D58BEA5AF747FC3684BC3A36BC /* FSAppModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A98EA1219A0AD6040876F3504239DF8F /* AppConfiger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D2EB5746C8628D5B917B9E527EBBECE /* AppConfiger.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AFAA886AE906DD6C321BA7926E424318 /* MJRefreshNormalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 34BFEBB6FF430D4AD80B76CFD540511A /* MJRefreshNormalHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B26ECC5FE57C03791D0BD1B15C4CBA04 /* FSBaseAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFA975529EA1CB33ED27D262ECECE0F /* FSBaseAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B45A866A31AF5199B58CE9ACFBA46607 /* FSBaseAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BBCD36AB2CA4555680135EA1BC6D412 /* FSBaseAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B48CCCBDE4E6FD2FFE43491DCD71A30A /* FSAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = D62B5AE342B238996E00C5F4BCC1F3B3 /* FSAlgorithm.m */; };
 		B4F54ED75DDF7085E8488B2DD857AB32 /* KRAes.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B474C6442C376CF6E2F3A0965A95FE /* KRAes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B61EFF05400E1B39428A1D83926289BF /* FSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81733CD758465D145EFF03D1EB99610E /* FSHalfView.m */; };
@@ -159,50 +157,52 @@
 		BA85EC4CDFA161E3C1FAFBF9FCE5312E /* FSViewToImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F05EE9C2E092EC280412DC1A1A1CBDB7 /* FSViewToImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BAAC4DE38CA0A9B30AA86ADA508D023E /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E675D37500A8730BABD736C8EA9B2161 /* NSBundle+MJRefresh.m */; };
 		BAFAFD05A02A448C023EB4151DA2A0EB /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = E3BD6CF66F2E406937297C94494FC4F7 /* GTMBase64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BBBD3A4493AFFCB0B1FDA0BE60545BD3 /* FSDBBaseGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F8717A8CB4469C6727476C80DF18F1 /* FSDBBaseGroupModel.m */; };
 		BD3B4A171CCF885896F5342EC5F44AC1 /* FSPdf.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAB82F239C64CB5A63AB7A4137AE63 /* FSPdf.m */; };
+		BDA3452069E103E413C4F091A93B5F79 /* FSDBGroupAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 928AB776F1EBFF5925E39B50397D5994 /* FSDBGroupAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BE9892416CBCE872B5FEF68BF9D48FB0 /* FSAppConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A8B7982DB2376338A413928CE8BDA3 /* FSAppConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BF7969B03E3B68F1AB8F420DD8ACE96D /* FSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B73E1D6DD18E7A5176CC417CB86D15 /* FSToast.m */; };
-		C12FD2977EE7DF1CE552685C8B907780 /* FSBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE219DD5EC683A435961111F624EF0 /* FSBaseAPI.m */; };
+		C14C107FB9E903D410E1EDA9E2FBCDB6 /* FSMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA7B436C87DE538DB300A8CFE9C2937 /* FSMacro.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C2C0005DAA9C06961121A9147EB84D1C /* MJRefreshBackNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 359F87B3FC6D44E1510D0783CACAAE8B /* MJRefreshBackNormalFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C729C1DB288531E70018CFD7CEE27EFA /* FSShare.h in Headers */ = {isa = PBXBuildFile; fileRef = FB846632F4856E638D368AE10E081D9B /* FSShare.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C7304AF86F46B0E349871912E98B3CA8 /* FSCryptorSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 578F62FF26B43987CDA11CA33E0EE091 /* FSCryptorSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C74300BCA7D1007D06D6F833AEA7CAFE /* MJRefreshStateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = D9913ACDF3F06945F9D850A5A899A9FA /* MJRefreshStateHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C8B3CC8BDA05434BBE67C0C2AA46215A /* FSAppConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 860073C00288330E22A0CACCDE831157 /* FSAppConfigModel.m */; };
 		C912FD5513A15E0A6485883456CF18E4 /* FSRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0DD237F25080DF7A4113B0C9425E2 /* FSRuntime.m */; };
-		CE789DD7C391B40A4ADFBB8D22F00376 /* FSCommonGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D52C0D169AB4977CF322716B4FC4434 /* FSCommonGroupController.m */; };
+		CE0A787D12D991A391DEC50164A90ABD /* FSCryptorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A90D92B6EBC1521561A65D44E2DC2F1 /* FSCryptorSupport.m */; };
 		CEE99BFAFA96E015DD904687EC5DE577 /* KRAes.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC3337415A428E0FFE0142657AA1C41 /* KRAes.m */; };
 		CEEA77F178708936EEB302246D4850BB /* FSViewToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EF8A0E8DB8C4A489F3D145CC5616E0 /* FSViewToImage.m */; };
-		CF574EE3EA3E8BB2D772D6200F5818A5 /* FSAccountRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C441F979B5E3648133089DEC516764 /* FSAccountRecordController.m */; };
 		CFC9E163451ACB627EF9A7EDD3534B47 /* FSBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEEA3CD3B8C637B07E21247E7A1CA0F /* FSBaseController.m */; };
 		D05FD93AF0097D727B82F7DA284C42FC /* FSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB188F3E64526A2FB1D2903038085F9E /* FSKit.m */; };
+		D214366DFB7344CC2BE752A6014755DD /* FSCommonGroupController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2010FC95634DB30114EB4D9B3B17F66D /* FSCommonGroupController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2BC955994D68222D88FECF85B460ED6 /* FSJZKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA1CBCB1C63A41B82322F91A80B826 /* FSJZKit-dummy.m */; };
 		D50901DB61CFB5C1252CD97B682BDE84 /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A9A7AA093B90190A4706800E1E292D /* MJRefreshBackNormalFooter.m */; };
+		D5585CC69D0747667341FB08EEF491AA /* FSReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 65778D8469317EC160604AB666E6FB3E /* FSReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D876D67049769C0C4B20ED0D58D07649 /* FSCryptorSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 57EC9F06D42A121297AA78179F095645 /* FSCryptorSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D891DDA1AFB5FB61937EACD7A399BD0A /* MJRefreshComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 424B72EA03E0C4EE720ED461E98DAA46 /* MJRefreshComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D8A241E1330A9A0B8BE78574BDC834F3 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5199797DB76270DFF1FB3385E704EC3D /* MJRefreshComponent.m */; };
+		D8F926F7AD6F79D964D051290E2E099D /* FSBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5C76AC478F941DD97D4735D855379 /* FSBaseAPI.m */; };
 		DA3521564BB9ECB356A619BF2D96BFA2 /* FSDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4749E8FC87113EFD674C71B40608805C /* FSDatePickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DB8115CFB7100B7D0F9D793287B726D1 /* FSDBGroupAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 30231A57ED4899B3A5127483C318CB96 /* FSDBGroupAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DF98EAB296AB52E0662E0FEA103B08F4 /* MJRefreshAutoGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C122544525A1E5978A1123157E5E6A1 /* MJRefreshAutoGifFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DFE5826B51DA4F8FC6B0BB4DA4807360 /* FSLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 08636494E016C98115E8BF2C59F10F3B /* FSLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E041875E02C10C7E3366715424109141 /* FSLeftItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AEE2EADA646B92F761BD7CB75ED5D /* FSLeftItem.m */; };
 		E05DDE1D1EF086D5F88E2ABF9ABC0BCB /* FSKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DBB48460DA882CC16C9AD401470960 /* FSKit-dummy.m */; };
 		E0C4F042A4A3765D5834D6359741BEB4 /* PHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5EAE65C88A28FC58A3BC862EBBD6EB /* PHTextView.m */; };
-		E13814786893BDB15CCB11B78B2DDFE4 /* FSAccountRecordController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FA865C98AB0C8C4B4B5736B701BE3A7 /* FSAccountRecordController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E22A8A6F0EEE3AF9C5263F7C1F06941E /* MJRefreshAutoFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5D175FB0AC705D4D170C9571FF2CCE /* MJRefreshAutoFooter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E258EAFEB6163A9A2DDB884D2694CBF8 /* FSCommonGroupController.h in Headers */ = {isa = PBXBuildFile; fileRef = C097B35B5EE9E8A167DFF7448CB629A6 /* FSCommonGroupController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E29B1C35240610E90CF48D8A479AE50D /* FSLabelTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1509AF924F71A7E871EB9C2D7168A3 /* FSLabelTextField.m */; };
 		E509B2BD75A1F290EF7D1983B3FE14CC /* FSWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CB162D816E512ED484A124037D7A8F7F /* FSWindow.m */; };
 		E69624DFD8992970B4A35560D13B1754 /* FSAutoLayoutButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA360447FB75A2DB53E9E9FD73B8E9 /* FSAutoLayoutButtonsView.m */; };
 		E703B421D4D70AD1DB4B3D4F291167EE /* UIViewController+BackButtonHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = FB6BD56CAC4FA7418C5E9FC43327B4EB /* UIViewController+BackButtonHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E724359A507C436EB3B63BDC42F82BFC /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18530C41A2BA3C3943B4BCD767AE4270 /* MJRefreshFooter.m */; };
+		E72DCD09D10A2D114A8C8CEC89F77078 /* FSKitDuty.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C3CEAC3AFF04B5DAD47BEC19CD2C29 /* FSKitDuty.m */; };
 		E7E5A6BDCA019714DD45C3A8A8D29877 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6B8026954F5E6466B0BBB86818F698 /* MJRefreshHeader.m */; };
 		E9370070C995ABF933B821548E65E6D3 /* FSCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F39DFDCB80E6792524F5B6072D36BDE4 /* FSCryptor.m */; };
+		E9CF07401F4F2AA8B2566109195749D9 /* FSAppConfigModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A727CCC525F73111D45A4FC045594E6 /* FSAppConfigModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EA3A276B4FA492121F1D414CF0D3BB2B /* FSURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 6031A9585D867DDF6D69E506445F63F7 /* FSURLSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EA5F215A15A980E0BD2ACCC19FE5011C /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0459DD2686C696EF75DBB2A4395603B5 /* MJRefreshConst.m */; };
-		ED96D0917699565DFB8E079CB9CAE1D2 /* FSTrackKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = A651F17F6EE0B045846F9DFDF5004A57 /* FSTrackKeys.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EDBE8DE495EF8B2C4B72D083C6A96EF6 /* MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 70DC2443AEED2C71EA0C14A60DE61D9A /* MJRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F255DC4C73E6E5CF163F17710DED54DB /* FSKitDuty.h in Headers */ = {isa = PBXBuildFile; fileRef = FEB9D88966C03E6B5307BCF291596107 /* FSKitDuty.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F38A66A2790B293A2421F25294DB4DB2 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B0963A894DEA282D8CCEB2331030909F /* MJRefreshAutoNormalFooter.m */; };
 		F399C5706F8BCB67E9ADC4A0897322FA /* UIScrollView+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFFCB09908DE8458A03E86694AE8C41 /* UIScrollView+MJRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F6096FD99E1F3384B6CB7DCE85DBDA2A /* FSAccountRecordController.h in Headers */ = {isa = PBXBuildFile; fileRef = B6561065B524C8A380A78A669DF04169 /* FSAccountRecordController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F61C8F2C76BDE0627EDED02EE096910F /* FSUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA864D1E3116C9147028B93714A4818 /* FSUIKit-dummy.m */; };
-		F7305326F6A26CD8231DFCB19D9FCA61 /* FSMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 38029264833A9E3BFDFB547943792979 /* FSMacro.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F86CA504512CC2ED450DD5979C8887B0 /* UIScrollView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CFBAEED6E32FD683808C8FADBF0A3DD8 /* UIScrollView+MJExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F8DEF5F916E7682D4B854AFCD664A489 /* FSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AA09F9A454150143A95C8A38B22D10 /* FSNavigationController.m */; };
 		F9F29E695E1A1E6742298925E05772DF /* FSViewToImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFF01B39D5B36E7CF1B928DE6320B7E /* FSViewToImage-dummy.m */; };
@@ -467,13 +467,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00532F83A1F8B15CD9F18EEF7E5CC994 /* FSDBGroupAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBGroupAPI.m; path = FSJZKit/Classes/FSDBGroupAPI.m; sourceTree = "<group>"; };
 		00840B472D94C3E72E78D9D4A0E9D120 /* FSCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalculator.h; path = FSCalculator/Classes/FSCalculator.h; sourceTree = "<group>"; };
 		01906A41C7AA2D4BBE82BF9212F53B97 /* FSDBJeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBJeView.m; path = FSUIKit/Classes/FSDBJeView.m; sourceTree = "<group>"; };
 		03864E74CCD92BB0DF2F7DD525997A56 /* FSTapScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTapScrollView.h; path = FSUIKit/Classes/FSTapScrollView.h; sourceTree = "<group>"; };
 		03ECAE073957D794371FF5624CE1351C /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJExtension.m"; path = "MJRefresh/UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
 		0459DD2686C696EF75DBB2A4395603B5 /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
-		072524C190131328467D87E16E36D4F8 /* FSCryptorSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCryptorSupport.m; path = FSJZKit/Classes/FSCryptorSupport.m; sourceTree = "<group>"; };
 		08636494E016C98115E8BF2C59F10F3B /* FSLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSLabel.h; path = FSUIKit/Classes/FSLabel.h; sourceTree = "<group>"; };
 		0A3C18315C374F836FC8D2E71B8F70D6 /* FSCalculator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSCalculator-dummy.m"; sourceTree = "<group>"; };
 		0AC4F6D5D83A2151651E212258308A67 /* FSRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSRuntime.h; path = FSKit/Classes/FSRuntime.h; sourceTree = "<group>"; };
@@ -487,68 +485,64 @@
 		18530C41A2BA3C3943B4BCD767AE4270 /* MJRefreshFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshFooter.m; path = MJRefresh/Base/MJRefreshFooter.m; sourceTree = "<group>"; };
 		19E99E5941ECA01041D32DA70BE1A7BD /* FSBaseController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSBaseController.h; path = FSBaseController/Classes/FSBaseController.h; sourceTree = "<group>"; };
 		1AFA360447FB75A2DB53E9E9FD73B8E9 /* FSAutoLayoutButtonsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAutoLayoutButtonsView.m; path = FSUIKit/Classes/FSAutoLayoutButtonsView.m; sourceTree = "<group>"; };
+		1B480ABB155325C9AD4AB1A56C952B3D /* FSDBSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBSupport.h; path = FSJZKit/Classes/FSDBSupport.h; sourceTree = "<group>"; };
 		1B4E4EC723FB4FFFD7DD2C8E36A6CD36 /* FSWindow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSWindow-dummy.m"; sourceTree = "<group>"; };
 		1E33E1741B25ACAC1C7C7740E80D18E2 /* MJRefreshConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConst.h; path = MJRefresh/MJRefreshConst.h; sourceTree = "<group>"; };
-		1EDFBB7CB27F6505A220B23CB9643DF5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		1F6BF0A749769F18749D62C7FE68FC02 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshGifHeader.h; path = MJRefresh/Custom/Header/MJRefreshGifHeader.h; sourceTree = "<group>"; };
-		1FA865C98AB0C8C4B4B5736B701BE3A7 /* FSAccountRecordController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAccountRecordController.h; path = FSJZKit/Classes/FSAccountRecordController.h; sourceTree = "<group>"; };
-		23CC2169A25F6981651830F4964B5BCF /* FSDBSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBSupport.h; path = FSJZKit/Classes/FSDBSupport.h; sourceTree = "<group>"; };
+		2010FC95634DB30114EB4D9B3B17F66D /* FSCommonGroupController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCommonGroupController.h; path = FSJZKit/Classes/FSCommonGroupController.h; sourceTree = "<group>"; };
 		2409BB36286EF404004140707114B65C /* FSTapLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSTapLabel.m; path = FSUIKit/Classes/FSTapLabel.m; sourceTree = "<group>"; };
+		269EDF164D6E3DF393025B9CF23BA709 /* AppConfiger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppConfiger.h; path = FSJZKit/Classes/AppConfiger.h; sourceTree = "<group>"; };
 		27175991FA796FAC628B9B670C5EA2A8 /* MJRefreshHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshHeader.h; path = MJRefresh/Base/MJRefreshHeader.h; sourceTree = "<group>"; };
-		278CF7B7648774E0ECBC1832CE6982A8 /* FSJZKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSJZKit-prefix.pch"; sourceTree = "<group>"; };
+		28887B410ABFA725B6C5B4EB899A0F43 /* FSAPP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAPP.h; path = FSJZKit/Classes/FSAPP.h; sourceTree = "<group>"; };
 		2A6B8026954F5E6466B0BBB86818F698 /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
 		2ACF435DE3880AD9BFA71DBB8BAEB30B /* FSTapCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSTapCell.m; path = FSUIKit/Classes/FSTapCell.m; sourceTree = "<group>"; };
-		2AD94079829CAD46102350866262D649 /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = FSJZKit/Classes/Reachability.m; sourceTree = "<group>"; };
 		2B2709DEC1148CE5918D905FE3380E83 /* FSToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSToast-dummy.m"; sourceTree = "<group>"; };
-		2BEAA00DFB7ED55ACB43285CE6C1BF22 /* FSDBSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBSupport.m; path = FSJZKit/Classes/FSDBSupport.m; sourceTree = "<group>"; };
 		2CEEA3CD3B8C637B07E21247E7A1CA0F /* FSBaseController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSBaseController.m; path = FSBaseController/Classes/FSBaseController.m; sourceTree = "<group>"; };
 		2DFFCB09908DE8458A03E86694AE8C41 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		2E7D3C88CB4CBD32B78FB888338F0E12 /* FSAppConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAppConfig.m; path = FSJZKit/Classes/FSAppConfig.m; sourceTree = "<group>"; };
 		2EA0DD237F25080DF7A4113B0C9425E2 /* FSRuntime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSRuntime.m; path = FSKit/Classes/FSRuntime.m; sourceTree = "<group>"; };
-		30231A57ED4899B3A5127483C318CB96 /* FSDBGroupAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBGroupAPI.h; path = FSJZKit/Classes/FSDBGroupAPI.h; sourceTree = "<group>"; };
 		322043059A6D2CF177256DE34455CB3B /* FSUIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSUIKit.xcconfig; sourceTree = "<group>"; };
 		32F9356D054574F39AA7A91B399C1F18 /* GTMBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = FSCryptor/Classes/GTMBase64.m; sourceTree = "<group>"; };
 		3313A4A6FBF80BF421686FCF6757BB9D /* FSDatePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDatePickerView.m; path = FSUIKit/Classes/FSDatePickerView.m; sourceTree = "<group>"; };
+		331619F78244335474A2305C102B7476 /* FSTrackKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTrackKeys.h; path = FSJZKit/Classes/FSTrackKeys.h; sourceTree = "<group>"; };
 		339AEE2EADA646B92F761BD7CB75ED5D /* FSLeftItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSLeftItem.m; path = FSUIKit/Classes/FSLeftItem.m; sourceTree = "<group>"; };
 		33A2235B2E6B12F183756C0E6219DC1F /* FSBaseController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSBaseController-prefix.pch"; sourceTree = "<group>"; };
 		34885C730412B1E8D322139E5293839A /* FSDBMaster.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBMaster.m; path = FSDBMaster/Classes/FSDBMaster.m; sourceTree = "<group>"; };
 		34BFEBB6FF430D4AD80B76CFD540511A /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalHeader.h; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.h; sourceTree = "<group>"; };
 		359F87B3FC6D44E1510D0783CACAAE8B /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
 		3644F5258A4CA5C6912F6FAC18B31668 /* FSUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSUIKit-prefix.pch"; sourceTree = "<group>"; };
-		37C441F979B5E3648133089DEC516764 /* FSAccountRecordController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAccountRecordController.m; path = FSJZKit/Classes/FSAccountRecordController.m; sourceTree = "<group>"; };
-		38029264833A9E3BFDFB547943792979 /* FSMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSMacro.h; path = FSJZKit/Classes/FSMacro.h; sourceTree = "<group>"; };
 		38AA73FF74F091D312A2A39CC27F7049 /* FSTitleContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSTitleContentView.m; path = FSUIKit/Classes/FSTitleContentView.m; sourceTree = "<group>"; };
 		39AAE2F186D770C384E5A6A129E6978D /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshNormalHeader.m; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.m; sourceTree = "<group>"; };
 		39EB485009F317CB8AB7246B668F1414 /* FSShakeBaseController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSShakeBaseController.h; path = FSBaseController/Classes/FSShakeBaseController.h; sourceTree = "<group>"; };
+		3A90D92B6EBC1521561A65D44E2DC2F1 /* FSCryptorSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCryptorSupport.m; path = FSJZKit/Classes/FSCryptorSupport.m; sourceTree = "<group>"; };
 		3AEDE7E1BB9B64F4979DC8A40DC76335 /* libFSDBMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSDBMaster.a; path = libFSDBMaster.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCFA6FCCDDDE58C813AAAAAAF6A4133 /* FSAVKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAVKit.h; path = FSKit/Classes/FSAVKit.h; sourceTree = "<group>"; };
 		3C2240017CD6703DD063227EC6A3B8CE /* FSToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSToast.xcconfig; sourceTree = "<group>"; };
-		3D52C0D169AB4977CF322716B4FC4434 /* FSCommonGroupController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCommonGroupController.m; path = FSJZKit/Classes/FSCommonGroupController.m; sourceTree = "<group>"; };
 		3D5D175FB0AC705D4D170C9571FF2CCE /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoFooter.h; path = MJRefresh/Base/MJRefreshAutoFooter.h; sourceTree = "<group>"; };
-		3E1AE1D48490894C1BBF6FFA24545F72 /* FSKitDuty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSKitDuty.m; path = FSJZKit/Classes/FSKitDuty.m; sourceTree = "<group>"; };
 		3E3908943F1C08FEE1675605A7E3B8BF /* libFSWindow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSWindow.a; path = libFSWindow.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AA09F9A454150143A95C8A38B22D10 /* FSNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSNavigationController.m; path = FSBaseController/Classes/FSNavigationController.m; sourceTree = "<group>"; };
-		4237EAE27E37467B04AD375DA6E672AD /* FSJZKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FSJZKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		423A9E02FA4CCB49AE320A141FE533BD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		424B72EA03E0C4EE720ED461E98DAA46 /* MJRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshComponent.h; path = MJRefresh/Base/MJRefreshComponent.h; sourceTree = "<group>"; };
-		44911628F936715DC83D09CA56579F34 /* FSDBBaseGroupModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBBaseGroupModel.m; path = FSJZKit/Classes/FSDBBaseGroupModel.m; sourceTree = "<group>"; };
+		438B92048DC83F84CA5D2542CB990661 /* FSReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSReachability.m; path = FSJZKit/Classes/FSReachability.m; sourceTree = "<group>"; };
 		4749E8FC87113EFD674C71B40608805C /* FSDatePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDatePickerView.h; path = FSUIKit/Classes/FSDatePickerView.h; sourceTree = "<group>"; };
+		4819739C3798866C447B163ACD1A3C18 /* FSDBGroupModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBGroupModel.h; path = FSJZKit/Classes/FSDBGroupModel.h; sourceTree = "<group>"; };
+		49029FD5CA81745673042CBF63D4B657 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		499CD06C8AE4B042CF051EADDF3DA5E3 /* UIView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MJExtension.h"; path = "MJRefresh/UIView+MJExtension.h"; sourceTree = "<group>"; };
 		49EEDF9826C4BC11E54B3F70F00F71B1 /* FSURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSURLSession.m; path = FSKit/Classes/FSURLSession.m; sourceTree = "<group>"; };
-		4C60F8AF78BA1EA9D5DB1284C7ED5BA3 /* FSAppConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAppConfig.m; path = FSJZKit/Classes/FSAppConfig.m; sourceTree = "<group>"; };
 		4CF718AFFA90F18DED4D94336654B3CD /* FSConstant.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSConstant.m; path = FSKit/Classes/FSConstant.m; sourceTree = "<group>"; };
-		4D2EB5746C8628D5B917B9E527EBBECE /* AppConfiger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppConfiger.h; path = FSJZKit/Classes/AppConfiger.h; sourceTree = "<group>"; };
 		4D6C3681B9A18EA2601FE4EE4FEB2C8A /* FSConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSConstant.h; path = FSKit/Classes/FSConstant.h; sourceTree = "<group>"; };
 		4DD9611E3821D5A917D700547E30D93B /* FSReuseTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSReuseTableView.m; path = FSUIKit/Classes/FSReuseTableView.m; sourceTree = "<group>"; };
 		4ED2EF766C6EF07ED3DAB30212620D67 /* libFSCryptor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSCryptor.a; path = libFSCryptor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5199797DB76270DFF1FB3385E704EC3D /* MJRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshComponent.m; path = MJRefresh/Base/MJRefreshComponent.m; sourceTree = "<group>"; };
+		555940C42390593CD9CAF61328BDD2D3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		55B2C3B14CC997B385C55584970FCFE8 /* FSAPP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAPP.m; path = FSJZKit/Classes/FSAPP.m; sourceTree = "<group>"; };
 		56279A56332D2E1467DC79CEDA340130 /* FSHook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSHook.h; path = FSKit/Classes/FSHook.h; sourceTree = "<group>"; };
 		5637B4BBBFF42B0106DC71AB98E17B94 /* Pods-FSJZKitSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FSJZKitSample.release.xcconfig"; sourceTree = "<group>"; };
-		578F62FF26B43987CDA11CA33E0EE091 /* FSCryptorSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCryptorSupport.h; path = FSJZKit/Classes/FSCryptorSupport.h; sourceTree = "<group>"; };
+		57EC9F06D42A121297AA78179F095645 /* FSCryptorSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCryptorSupport.h; path = FSJZKit/Classes/FSCryptorSupport.h; sourceTree = "<group>"; };
 		580A46FF9894910A111BB083CCEE5760 /* FSHalfView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSHalfView.h; path = FSUIKit/Classes/FSHalfView.h; sourceTree = "<group>"; };
 		588878A5282AFCC3FFE6067177BCAC8D /* libPods-FSJZKitSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-FSJZKitSample.a"; path = "libPods-FSJZKitSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		597AB6D58BEA5AF747FC3684BC3A36BC /* FSAppModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAppModel.h; path = FSJZKit/Classes/FSAppModel.h; sourceTree = "<group>"; };
 		5BD3DEE7595CE5514DAAC0EBF624F41E /* FSDBMaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSDBMaster-dummy.m"; sourceTree = "<group>"; };
 		5C4BA501FE43C21785E2E80DBEAB0E0B /* libFSBaseController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSBaseController.a; path = libFSBaseController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5ECA07ECBA69530F241B6EF5F043C7 /* FSDBGroupAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBGroupAPI.m; path = FSJZKit/Classes/FSDBGroupAPI.m; sourceTree = "<group>"; };
 		5CAA14DDE40DB3F2C3089B1D58FA48DD /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshGifHeader.m; path = MJRefresh/Custom/Header/MJRefreshGifHeader.m; sourceTree = "<group>"; };
 		5D0E9E9E4BE5095C3B0B764DEC9A6841 /* FSViewToImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSViewToImage.xcconfig; sourceTree = "<group>"; };
 		6031A9585D867DDF6D69E506445F63F7 /* FSURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSURLSession.h; path = FSKit/Classes/FSURLSession.h; sourceTree = "<group>"; };
@@ -556,72 +550,77 @@
 		629BD4CDD16C4083887303A0E96D50B3 /* FSPdf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSPdf.h; path = FSKit/Classes/FSPdf.h; sourceTree = "<group>"; };
 		62B12189701A2E0C85208A698E540413 /* FSTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSTrack.m; path = FSTrack/Classes/FSTrack.m; sourceTree = "<group>"; };
 		62B5629A347F60CAEFD24898A2A41272 /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MJRefresh.h"; path = "MJRefresh/NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
+		63E3DAC99CA4EFF76FE72047BEA60255 /* FSAccountRecordController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAccountRecordController.m; path = FSJZKit/Classes/FSAccountRecordController.m; sourceTree = "<group>"; };
 		64698C0060DBD610561CEDEAC8EDF0D5 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
 		64C2B2BE4CB895D9240C51DECDCE8FB8 /* UIViewExt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIViewExt.m; path = FSUIKit/Classes/UIViewExt.m; sourceTree = "<group>"; };
 		652B91AAF6CE27AD3545169C94C24EE2 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = WeChatSDK1.8.3/libWeChatSDK.a; sourceTree = "<group>"; };
+		65778D8469317EC160604AB666E6FB3E /* FSReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSReachability.h; path = FSJZKit/Classes/FSReachability.h; sourceTree = "<group>"; };
 		65B758D962117EE03EC893871028D8CE /* Pods-FSJZKitSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FSJZKitSample-dummy.m"; sourceTree = "<group>"; };
 		6681B45065B299E5A28B569E0A9577A7 /* libFSTrack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSTrack.a; path = libFSTrack.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		687463E30B17376BDDECD1A67290472E /* FSCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCryptor.h; path = FSCryptor/Classes/FSCryptor.h; sourceTree = "<group>"; };
+		6BBCD36AB2CA4555680135EA1BC6D412 /* FSBaseAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSBaseAPI.h; path = FSJZKit/Classes/FSBaseAPI.h; sourceTree = "<group>"; };
 		6D2BD24F3228892B4C1F78018A38B218 /* libFSJZKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSJZKit.a; path = libFSJZKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EFA975529EA1CB33ED27D262ECECE0F /* FSBaseAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSBaseAPI.h; path = FSJZKit/Classes/FSBaseAPI.h; sourceTree = "<group>"; };
 		6F1509AF924F71A7E871EB9C2D7168A3 /* FSLabelTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSLabelTextField.m; path = FSUIKit/Classes/FSLabelTextField.m; sourceTree = "<group>"; };
 		70AFE6731C65EB84DFB92BD667926F69 /* FSVanView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSVanView.h; path = FSUIKit/Classes/FSVanView.h; sourceTree = "<group>"; };
 		70CE9F8CF60636C4969B4526865CB5F3 /* FuSoft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FuSoft.h; path = FSKit/Classes/FuSoft.h; sourceTree = "<group>"; };
 		70DC2443AEED2C71EA0C14A60DE61D9A /* MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = MJRefresh/MJRefresh.h; sourceTree = "<group>"; };
+		71F8717A8CB4469C6727476C80DF18F1 /* FSDBBaseGroupModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBBaseGroupModel.m; path = FSJZKit/Classes/FSDBBaseGroupModel.m; sourceTree = "<group>"; };
 		72E8E494C6BDC2DD84EE3CBB87F34DD9 /* FSAVKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAVKit.m; path = FSKit/Classes/FSAVKit.m; sourceTree = "<group>"; };
 		735A14180C7410C14172EFF26F15F79C /* FSVanView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSVanView.m; path = FSUIKit/Classes/FSVanView.m; sourceTree = "<group>"; };
-		7441E49AE896E4B1A6B8460EA8A997FB /* FSDBBaseGroupModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBBaseGroupModel.h; path = FSJZKit/Classes/FSDBBaseGroupModel.h; sourceTree = "<group>"; };
 		7555F8E366992BBF00B78421128C70A2 /* FSHook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSHook.m; path = FSKit/Classes/FSHook.m; sourceTree = "<group>"; };
 		7556DE9E54FCF7556E1D5227856F8AEB /* FSWindow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSWindow.xcconfig; sourceTree = "<group>"; };
-		75AE9C01532415982D354AFD42F1A214 /* FSDBGroupModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBGroupModel.h; path = FSJZKit/Classes/FSDBGroupModel.h; sourceTree = "<group>"; };
 		761D29DFBD0E79AC1E9E278026E3E8FB /* FSTuple-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSTuple-dummy.m"; sourceTree = "<group>"; };
 		77A01BCEB5A9F509ACB0EBC6A57DDB00 /* FSCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalculator.m; path = FSCalculator/Classes/FSCalculator.m; sourceTree = "<group>"; };
 		78B474C6442C376CF6E2F3A0965A95FE /* KRAes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KRAes.h; path = FSCryptor/Classes/KRAes.h; sourceTree = "<group>"; };
 		7AF43CE15ED0669FDAA5A43A78F77542 /* FSBaseController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSBaseController.xcconfig; sourceTree = "<group>"; };
-		7B7A19479E78031A06A3C475E9767411 /* FSAppConfigModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAppConfigModel.h; path = FSJZKit/Classes/FSAppConfigModel.h; sourceTree = "<group>"; };
 		7D14F5E421404BFDA253CBAE852590BF /* libFSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSKit.a; path = libFSKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5EAE65C88A28FC58A3BC862EBBD6EB /* PHTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PHTextView.m; path = FSUIKit/Classes/PHTextView.m; sourceTree = "<group>"; };
-		7FC0B169995AA7830E4A972096644A25 /* FSDBGroupModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBGroupModel.m; path = FSJZKit/Classes/FSDBGroupModel.m; sourceTree = "<group>"; };
 		7FE4A4B12B49FB1C5CB9C8F92D163FFE /* FSAlgorithm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAlgorithm.h; path = FSKit/Classes/FSAlgorithm.h; sourceTree = "<group>"; };
 		81733CD758465D145EFF03D1EB99610E /* FSHalfView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSHalfView.m; path = FSUIKit/Classes/FSHalfView.m; sourceTree = "<group>"; };
 		81BD113FEFC1BC479ECD2CDE13F4D2E7 /* FSDBMaster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBMaster.h; path = FSDBMaster/Classes/FSDBMaster.h; sourceTree = "<group>"; };
-		826C491E76EC6BA030EF5583EA142CE7 /* FSJZKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSJZKit-dummy.m"; sourceTree = "<group>"; };
 		83255992A45163B18357768FF750B72B /* FSFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSFile.m; path = FSKit/Classes/FSFile.m; sourceTree = "<group>"; };
 		8562A201D7A9660EE31622DE266AF3B6 /* FSEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSEntity.m; path = FSKit/Classes/FSEntity.m; sourceTree = "<group>"; };
-		860073C00288330E22A0CACCDE831157 /* FSAppConfigModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAppConfigModel.m; path = FSJZKit/Classes/FSAppConfigModel.m; sourceTree = "<group>"; };
 		875BCEC4848D2F256466AFA0B9B5BF3E /* FSUIKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSUIKit.m; path = FSUIKit/Classes/FSUIKit.m; sourceTree = "<group>"; };
 		887FADA4D92FB1FFB21B025DB00F3FB5 /* libFSToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSToast.a; path = libFSToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		889EA9794BCA8452E7017E9713DABBD5 /* FSJZKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSJZKit.xcconfig; sourceTree = "<group>"; };
+		8A727CCC525F73111D45A4FC045594E6 /* FSAppConfigModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAppConfigModel.h; path = FSJZKit/Classes/FSAppConfigModel.h; sourceTree = "<group>"; };
+		8AC5C76AC478F941DD97D4735D855379 /* FSBaseAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSBaseAPI.m; path = FSJZKit/Classes/FSBaseAPI.m; sourceTree = "<group>"; };
 		8AED20BA08805D41400045DAFF73E5BD /* FSTrack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSTrack-prefix.pch"; sourceTree = "<group>"; };
 		8B3F24B548830DAFD9D34ED9B1DAF0BC /* FSTextViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTextViewController.h; path = FSBaseController/Classes/FSTextViewController.h; sourceTree = "<group>"; };
 		8B4B32B141AE7A4D460C9FE429FF6C14 /* FSTapScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSTapScrollView.m; path = FSUIKit/Classes/FSTapScrollView.m; sourceTree = "<group>"; };
 		8EA864D1E3116C9147028B93714A4818 /* FSUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSUIKit-dummy.m"; sourceTree = "<group>"; };
 		8F60A39E5E3FC5065F02A2E45C302439 /* FSNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSNavigationController.h; path = FSBaseController/Classes/FSNavigationController.h; sourceTree = "<group>"; };
 		8F78B0196110D4BD2A4D16F054CB0EE8 /* FSTapLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTapLabel.h; path = FSUIKit/Classes/FSTapLabel.h; sourceTree = "<group>"; };
+		90C3CEAC3AFF04B5DAD47BEC19CD2C29 /* FSKitDuty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSKitDuty.m; path = FSJZKit/Classes/FSKitDuty.m; sourceTree = "<group>"; };
 		9115C814E582DAE78E8A10EAD21D0CA1 /* Pods-FSJZKitSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FSJZKitSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		919A1690B1CA4B48DF03B7761AF9F75A /* FSCommonGroupController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCommonGroupController.m; path = FSJZKit/Classes/FSCommonGroupController.m; sourceTree = "<group>"; };
 		91AF08D553BB6B3405919AD12A142368 /* FSUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSUIKit.h; path = FSUIKit/Classes/FSUIKit.h; sourceTree = "<group>"; };
 		9213D2F1BBBCE051F2CE99884C408F95 /* FSDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDate.m; path = FSKit/Classes/FSDate.m; sourceTree = "<group>"; };
 		9217ADDC16A94E79590D2FD955F35CA8 /* FSCryptor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSCryptor-dummy.m"; sourceTree = "<group>"; };
+		928AB776F1EBFF5925E39B50397D5994 /* FSDBGroupAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBGroupAPI.h; path = FSJZKit/Classes/FSDBGroupAPI.h; sourceTree = "<group>"; };
+		92A8B7982DB2376338A413928CE8BDA3 /* FSAppConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAppConfig.h; path = FSJZKit/Classes/FSAppConfig.h; sourceTree = "<group>"; };
 		93ECFB5F19C484F3410731FC2C43C761 /* FSKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSKit.h; path = FSKit/Classes/FSKit.h; sourceTree = "<group>"; };
 		93FBB849F32A4BE86EAFD1924911E2F0 /* FSTuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSTuple.m; path = FSTuple/Classes/FSTuple.m; sourceTree = "<group>"; };
 		94BBF922A8E18C114CF9E8EB237A9E08 /* libFSViewToImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSViewToImage.a; path = libFSViewToImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FB5A38493DD361AA404BDBC9892536 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
 		95B1DE33BEAFA7742983828208198312 /* RSA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RSA.m; path = FSCryptor/Classes/RSA.m; sourceTree = "<group>"; };
 		95B73E1D6DD18E7A5176CC417CB86D15 /* FSToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSToast.m; path = FSToast/Classes/FSToast.m; sourceTree = "<group>"; };
+		960D66BCD8DB03B93309C98E28DC4C1F /* FSJZKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FSJZKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		972A720C98C2E06721FCD703B70EF69C /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
 		986A4E334D9E67C6A5537EB3265CF652 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
 		9886D7317E6C269C78A3B488CD68D8BD /* FSKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSKit-prefix.pch"; sourceTree = "<group>"; };
 		990C269827F568A038FFE9F7FB155123 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJRefresh.m"; path = "MJRefresh/UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		9971C63DDF9382BA0B2993DEB19A3F55 /* FSAppModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAppModel.h; path = FSJZKit/Classes/FSAppModel.h; sourceTree = "<group>"; };
 		9C5A2F9BF4A1A64F907737FFB962BC6B /* FSShakeBaseController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSShakeBaseController.m; path = FSBaseController/Classes/FSShakeBaseController.m; sourceTree = "<group>"; };
 		9D243B1D04746C4DC9069181ABF3DC51 /* FSTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSTextViewController.m; path = FSBaseController/Classes/FSTextViewController.m; sourceTree = "<group>"; };
 		9D30412E85B0224A736E417441CD8A34 /* FSTuple-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSTuple-prefix.pch"; sourceTree = "<group>"; };
 		9D6067715096AD275164560BAFD3CA69 /* libMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMJRefresh.a; path = libMJRefresh.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FAE219DD5EC683A435961111F624EF0 /* FSBaseAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSBaseAPI.m; path = FSJZKit/Classes/FSBaseAPI.m; sourceTree = "<group>"; };
 		A0E7C2F0D8D50811E45E0E19CBAB54F3 /* MJRefresh.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = MJRefresh.bundle; path = MJRefresh/MJRefresh.bundle; sourceTree = "<group>"; };
+		A2417A87DF08B09F75BD3B2BA04FE828 /* FSAppConfigModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAppConfigModel.m; path = FSJZKit/Classes/FSAppConfigModel.m; sourceTree = "<group>"; };
 		A2954BD925E3D62EE6E50EF684263888 /* Pods-FSJZKitSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FSJZKitSample.debug.xcconfig"; sourceTree = "<group>"; };
-		A2E077D2F15704AE219321AA852A7D6A /* FSAppModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAppModel.m; path = FSJZKit/Classes/FSAppModel.m; sourceTree = "<group>"; };
 		A3B51CCB1C048E715AB8BB9896A919C5 /* FSShare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSShare.m; path = FSShare/Classes/FSShare.m; sourceTree = "<group>"; };
 		A43671DE372DA852DC69C298CAF1FF8C /* FSDBJeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBJeView.h; path = FSUIKit/Classes/FSDBJeView.h; sourceTree = "<group>"; };
-		A651F17F6EE0B045846F9DFDF5004A57 /* FSTrackKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTrackKeys.h; path = FSJZKit/Classes/FSTrackKeys.h; sourceTree = "<group>"; };
+		A7EA1CBCB1C63A41B82322F91A80B826 /* FSJZKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSJZKit-dummy.m"; sourceTree = "<group>"; };
 		A9E183E8804A26B4EE8EC1913129B0C2 /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackGifFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
 		A9E2C98971223E6EC4A1D75183669338 /* FSFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSFile.h; path = FSKit/Classes/FSFile.h; sourceTree = "<group>"; };
 		B0963A894DEA282D8CCEB2331030909F /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
@@ -630,6 +629,7 @@
 		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B5C38AC73E1F2A19E498B95265DB71A7 /* FSTapCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTapCell.h; path = FSUIKit/Classes/FSTapCell.h; sourceTree = "<group>"; };
 		B6455B7846B93FE97FB1ADC26AB38A63 /* FSKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSKit.xcconfig; sourceTree = "<group>"; };
+		B6561065B524C8A380A78A669DF04169 /* FSAccountRecordController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAccountRecordController.h; path = FSJZKit/Classes/FSAccountRecordController.h; sourceTree = "<group>"; };
 		B89C9D7CD8001A4AD50682405252B5BE /* PHTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PHTextView.h; path = FSUIKit/Classes/PHTextView.h; sourceTree = "<group>"; };
 		BA99592F7ED4CD156AF403A0D0416951 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = WeChatSDK1.8.3/WXApi.h; sourceTree = "<group>"; };
 		BAB813EA419D4E4B04DBF9E627118E20 /* FSWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSWindow.h; path = FSWindow/Classes/FSWindow.h; sourceTree = "<group>"; };
@@ -639,12 +639,10 @@
 		BD5FB12FCACFD830B8347103411B1BF1 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BackButtonHandler.m"; path = "FSBaseController/Classes/UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		BE7E1BF03B000C53667327157985146C /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		BFBAB82F239C64CB5A63AB7A4137AE63 /* FSPdf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPdf.m; path = FSKit/Classes/FSPdf.m; sourceTree = "<group>"; };
-		C097B35B5EE9E8A167DFF7448CB629A6 /* FSCommonGroupController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCommonGroupController.h; path = FSJZKit/Classes/FSCommonGroupController.h; sourceTree = "<group>"; };
 		C0D79C71772E535A33ADCCE4561A2EA0 /* FSTrack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSTrack.xcconfig; sourceTree = "<group>"; };
 		C28EB323F25843453DBAE087482A51B9 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
 		C37CDB44F90DB3ED420BB51B8736E4DC /* FSDBMaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSDBMaster-prefix.pch"; sourceTree = "<group>"; };
 		C541C11BA32626FDB7B2D49488FEA649 /* FSDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDate.h; path = FSKit/Classes/FSDate.h; sourceTree = "<group>"; };
-		C5E9C762CBC3AC35B234F4838529366E /* FSAPP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAPP.m; path = FSJZKit/Classes/FSAPP.m; sourceTree = "<group>"; };
 		C650E99A8C37F118A3BFAA21D8AA6558 /* Pods-FSJZKitSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FSJZKitSample-resources.sh"; sourceTree = "<group>"; };
 		C75E7513C07CF12A3CE3789B08657F62 /* FSCalculator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalculator-prefix.pch"; sourceTree = "<group>"; };
 		C880D22C0CE7F2F5C7AFBAF762FA542D /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
@@ -654,37 +652,39 @@
 		CC4CAB0D35961EA369F12E460D6090ED /* FSViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSViewManager.m; path = FSUIKit/Classes/FSViewManager.m; sourceTree = "<group>"; };
 		CD0B1B459922F9BD94BA7D9548C247DD /* FSLocalNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSLocalNotification.m; path = FSKit/Classes/FSLocalNotification.m; sourceTree = "<group>"; };
 		CD2428081D1832E90CB58129E4D3FE5C /* libFSShare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSShare.a; path = libFSShare.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE9631E22F32B7669E6674EA0AD3F42 /* FSDBBaseGroupModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSDBBaseGroupModel.h; path = FSJZKit/Classes/FSDBBaseGroupModel.h; sourceTree = "<group>"; };
 		CF757516BB05EF38BDA79B875E7FAC78 /* FSShare-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSShare-dummy.m"; sourceTree = "<group>"; };
 		CFBAEED6E32FD683808C8FADBF0A3DD8 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		CFD9EF01E78E598E84DC9BBC3163F2F6 /* FSCryptor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSCryptor.xcconfig; sourceTree = "<group>"; };
+		D02B22BC440D4212579057B082BE714D /* FSDBSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBSupport.m; path = FSJZKit/Classes/FSDBSupport.m; sourceTree = "<group>"; };
 		D0A9A7AA093B90190A4706800E1E292D /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackNormalFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		D1DBF618A18C778C8C238E4CFE82846D /* FSShare.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSShare.xcconfig; sourceTree = "<group>"; };
 		D2A52592C7F5EF0B20290975D8BDB395 /* FSToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSToast-prefix.pch"; sourceTree = "<group>"; };
+		D2F03768CDBF1951273C54D46AD32235 /* FSJZKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSJZKit-prefix.pch"; sourceTree = "<group>"; };
 		D37730713A90DE5F901D9569F877EC9B /* FSEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSEntity.h; path = FSKit/Classes/FSEntity.h; sourceTree = "<group>"; };
 		D3A38A3F8D9BD0B8EB3B4D419AD51847 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		D4B727B38AD1E7893DB5BA332A9E5C54 /* FSDBGroupModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSDBGroupModel.m; path = FSJZKit/Classes/FSDBGroupModel.m; sourceTree = "<group>"; };
 		D60D922507544B1C119864A37B9DB4AC /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
 		D62B5AE342B238996E00C5F4BCC1F3B3 /* FSAlgorithm.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAlgorithm.m; path = FSKit/Classes/FSAlgorithm.m; sourceTree = "<group>"; };
-		D88E68D92B56B7EDAABE4FF41AFC5ECD /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = FSJZKit/Classes/Reachability.h; sourceTree = "<group>"; };
 		D8E0E3398291B9ADDB065B3942045865 /* FSTrack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSTrack-dummy.m"; sourceTree = "<group>"; };
 		D9913ACDF3F06945F9D850A5A899A9FA /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
 		DA302D0FDE21469960846CD1214D3207 /* FSTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTuple.h; path = FSTuple/Classes/FSTuple.h; sourceTree = "<group>"; };
+		DADF0C9E0EC6F8F96E40D4520A8ECD0B /* FSKitDuty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSKitDuty.h; path = FSJZKit/Classes/FSKitDuty.h; sourceTree = "<group>"; };
 		DBF5DA8893C65C54C77EFF3734E6D23A /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
 		E04A7F14174C98830B0D6631889BF0D5 /* libFSCalculator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSCalculator.a; path = libFSCalculator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0FD7CBB4C86BEC2EB2B9CCB77476806 /* FSAppModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAppModel.m; path = FSJZKit/Classes/FSAppModel.m; sourceTree = "<group>"; };
 		E18DDDB55B2E6B8D580922273C66978B /* FSLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSLabel.m; path = FSUIKit/Classes/FSLabel.m; sourceTree = "<group>"; };
 		E19152FB13D9444C37C3179022632655 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = WeChatSDK1.8.3/WXApiObject.h; sourceTree = "<group>"; };
 		E1FCC9D1CF9A8B9D91E0BF049A76A2A7 /* FSDBMaster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSDBMaster.xcconfig; sourceTree = "<group>"; };
 		E3370C8FDBF4EE028E96C98DD3E50535 /* FSToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSToast.h; path = FSToast/Classes/FSToast.h; sourceTree = "<group>"; };
 		E3BD6CF66F2E406937297C94494FC4F7 /* GTMBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = FSCryptor/Classes/GTMBase64.h; sourceTree = "<group>"; };
 		E55E528919DAAC731222415E8259F90C /* FSShopClassView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSShopClassView.h; path = FSUIKit/Classes/FSShopClassView.h; sourceTree = "<group>"; };
-		E63B2D0671269E213F7CDC8F3FC8EE58 /* FSAppConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAppConfig.h; path = FSJZKit/Classes/FSAppConfig.h; sourceTree = "<group>"; };
 		E675D37500A8730BABD736C8EA9B2161 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
 		E6B288AB6CA0D0B98828C48949745D74 /* FSCalculator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSCalculator.xcconfig; sourceTree = "<group>"; };
 		E7666E3F8C21A75E057BE828933E215C /* FSBaseController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSBaseController-dummy.m"; sourceTree = "<group>"; };
 		E7A1D54B93D1675EF83F60CE41640C15 /* libFSTuple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFSTuple.a; path = libFSTuple.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D5FAB2611B4860BFD3E33149134FBE /* UMengAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMengAnalytics.xcconfig; sourceTree = "<group>"; };
 		E7DCF747B79B0D5EC2D66B485887CD5E /* FSShopClassView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSShopClassView.m; path = FSUIKit/Classes/FSShopClassView.m; sourceTree = "<group>"; };
-		E83D0B1831B205EF3B92930D4685A073 /* FSAPP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAPP.h; path = FSJZKit/Classes/FSAPP.h; sourceTree = "<group>"; };
-		EA4E12545E5132277D77D29D84D2E241 /* FSJZKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSJZKit.xcconfig; sourceTree = "<group>"; };
 		EBA46F871B0731ABD193E365348D17B2 /* FSCryptor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCryptor-prefix.pch"; sourceTree = "<group>"; };
 		EFC3337415A428E0FFE0142657AA1C41 /* KRAes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KRAes.m; path = FSCryptor/Classes/KRAes.m; sourceTree = "<group>"; };
 		F05EE9C2E092EC280412DC1A1A1CBDB7 /* FSViewToImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSViewToImage.h; path = FSViewToImage/Classes/FSViewToImage.h; sourceTree = "<group>"; };
@@ -707,7 +707,7 @@
 		FB846632F4856E638D368AE10E081D9B /* FSShare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSShare.h; path = FSShare/Classes/FSShare.h; sourceTree = "<group>"; };
 		FC2F5F739A5525AD8B3B63E36657C443 /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
 		FDFA9AAA1136D625C2BA409B78E48BB9 /* FSTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSTrack.h; path = FSTrack/Classes/FSTrack.h; sourceTree = "<group>"; };
-		FEB9D88966C03E6B5307BCF291596107 /* FSKitDuty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSKitDuty.h; path = FSJZKit/Classes/FSKitDuty.h; sourceTree = "<group>"; };
+		FFA7B436C87DE538DB300A8CFE9C2937 /* FSMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSMacro.h; path = FSJZKit/Classes/FSMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -952,47 +952,6 @@
 			path = FSWindow;
 			sourceTree = "<group>";
 		};
-		5088AEF877DA29A7F450A49A7F5B1ED0 /* FSJZKit */ = {
-			isa = PBXGroup;
-			children = (
-				4D2EB5746C8628D5B917B9E527EBBECE /* AppConfiger.h */,
-				1FA865C98AB0C8C4B4B5736B701BE3A7 /* FSAccountRecordController.h */,
-				37C441F979B5E3648133089DEC516764 /* FSAccountRecordController.m */,
-				E83D0B1831B205EF3B92930D4685A073 /* FSAPP.h */,
-				C5E9C762CBC3AC35B234F4838529366E /* FSAPP.m */,
-				E63B2D0671269E213F7CDC8F3FC8EE58 /* FSAppConfig.h */,
-				4C60F8AF78BA1EA9D5DB1284C7ED5BA3 /* FSAppConfig.m */,
-				7B7A19479E78031A06A3C475E9767411 /* FSAppConfigModel.h */,
-				860073C00288330E22A0CACCDE831157 /* FSAppConfigModel.m */,
-				597AB6D58BEA5AF747FC3684BC3A36BC /* FSAppModel.h */,
-				A2E077D2F15704AE219321AA852A7D6A /* FSAppModel.m */,
-				6EFA975529EA1CB33ED27D262ECECE0F /* FSBaseAPI.h */,
-				9FAE219DD5EC683A435961111F624EF0 /* FSBaseAPI.m */,
-				C097B35B5EE9E8A167DFF7448CB629A6 /* FSCommonGroupController.h */,
-				3D52C0D169AB4977CF322716B4FC4434 /* FSCommonGroupController.m */,
-				578F62FF26B43987CDA11CA33E0EE091 /* FSCryptorSupport.h */,
-				072524C190131328467D87E16E36D4F8 /* FSCryptorSupport.m */,
-				7441E49AE896E4B1A6B8460EA8A997FB /* FSDBBaseGroupModel.h */,
-				44911628F936715DC83D09CA56579F34 /* FSDBBaseGroupModel.m */,
-				30231A57ED4899B3A5127483C318CB96 /* FSDBGroupAPI.h */,
-				00532F83A1F8B15CD9F18EEF7E5CC994 /* FSDBGroupAPI.m */,
-				75AE9C01532415982D354AFD42F1A214 /* FSDBGroupModel.h */,
-				7FC0B169995AA7830E4A972096644A25 /* FSDBGroupModel.m */,
-				23CC2169A25F6981651830F4964B5BCF /* FSDBSupport.h */,
-				2BEAA00DFB7ED55ACB43285CE6C1BF22 /* FSDBSupport.m */,
-				FEB9D88966C03E6B5307BCF291596107 /* FSKitDuty.h */,
-				3E1AE1D48490894C1BBF6FFA24545F72 /* FSKitDuty.m */,
-				38029264833A9E3BFDFB547943792979 /* FSMacro.h */,
-				A651F17F6EE0B045846F9DFDF5004A57 /* FSTrackKeys.h */,
-				D88E68D92B56B7EDAABE4FF41AFC5ECD /* Reachability.h */,
-				2AD94079829CAD46102350866262D649 /* Reachability.m */,
-				5ACEE1C6C9CFD33FD005EA60D317E358 /* Pod */,
-				5F9F1E8C323CA3DF0CC3C1F1327C0A2F /* Support Files */,
-			);
-			name = FSJZKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		526D29E11E91617EC67EDF6D1EAA950E /* FSBaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1021,27 +980,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FSCalculator";
-			sourceTree = "<group>";
-		};
-		5ACEE1C6C9CFD33FD005EA60D317E358 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4237EAE27E37467B04AD375DA6E672AD /* FSJZKit.podspec */,
-				423A9E02FA4CCB49AE320A141FE533BD /* LICENSE */,
-				1EDFBB7CB27F6505A220B23CB9643DF5 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		5F9F1E8C323CA3DF0CC3C1F1327C0A2F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EA4E12545E5132277D77D29D84D2E241 /* FSJZKit.xcconfig */,
-				826C491E76EC6BA030EF5583EA142CE7 /* FSJZKit-dummy.m */,
-				278CF7B7648774E0ECBC1832CE6982A8 /* FSJZKit-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "FSJZKitSample/Pods/Target Support Files/FSJZKit";
 			sourceTree = "<group>";
 		};
 		678C39D6813B9A08873A20D42ACEFFA0 /* Support Files */ = {
@@ -1214,6 +1152,16 @@
 			path = "../Target Support Files/FSTrack";
 			sourceTree = "<group>";
 		};
+		9AA6FEEFEF0F52A9D2FBEDF1C87FDE74 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				960D66BCD8DB03B93309C98E28DC4C1F /* FSJZKit.podspec */,
+				49029FD5CA81745673042CBF63D4B657 /* LICENSE */,
+				555940C42390593CD9CAF61328BDD2D3 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		9BD502382C9CBC09A37EDD613FFB5ADA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1350,6 +1298,17 @@
 			path = FSKit;
 			sourceTree = "<group>";
 		};
+		AFFBE91D6C22313E5AE333D9BB82C4FB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				889EA9794BCA8452E7017E9713DABBD5 /* FSJZKit.xcconfig */,
+				A7EA1CBCB1C63A41B82322F91A80B826 /* FSJZKit-dummy.m */,
+				D2F03768CDBF1951273C54D46AD32235 /* FSJZKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "FSJZKitSample/Pods/Target Support Files/FSJZKit";
+			sourceTree = "<group>";
+		};
 		BA12E0BD1DAE69A7661844ADF2D6AB31 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1394,9 +1353,50 @@
 		E264F4BA8241C64D9724A0AF604226C1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5088AEF877DA29A7F450A49A7F5B1ED0 /* FSJZKit */,
+				EFF19EA94EF3729C62372A60C7D76B6B /* FSJZKit */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		EFF19EA94EF3729C62372A60C7D76B6B /* FSJZKit */ = {
+			isa = PBXGroup;
+			children = (
+				269EDF164D6E3DF393025B9CF23BA709 /* AppConfiger.h */,
+				B6561065B524C8A380A78A669DF04169 /* FSAccountRecordController.h */,
+				63E3DAC99CA4EFF76FE72047BEA60255 /* FSAccountRecordController.m */,
+				28887B410ABFA725B6C5B4EB899A0F43 /* FSAPP.h */,
+				55B2C3B14CC997B385C55584970FCFE8 /* FSAPP.m */,
+				92A8B7982DB2376338A413928CE8BDA3 /* FSAppConfig.h */,
+				2E7D3C88CB4CBD32B78FB888338F0E12 /* FSAppConfig.m */,
+				8A727CCC525F73111D45A4FC045594E6 /* FSAppConfigModel.h */,
+				A2417A87DF08B09F75BD3B2BA04FE828 /* FSAppConfigModel.m */,
+				9971C63DDF9382BA0B2993DEB19A3F55 /* FSAppModel.h */,
+				E0FD7CBB4C86BEC2EB2B9CCB77476806 /* FSAppModel.m */,
+				6BBCD36AB2CA4555680135EA1BC6D412 /* FSBaseAPI.h */,
+				8AC5C76AC478F941DD97D4735D855379 /* FSBaseAPI.m */,
+				2010FC95634DB30114EB4D9B3B17F66D /* FSCommonGroupController.h */,
+				919A1690B1CA4B48DF03B7761AF9F75A /* FSCommonGroupController.m */,
+				57EC9F06D42A121297AA78179F095645 /* FSCryptorSupport.h */,
+				3A90D92B6EBC1521561A65D44E2DC2F1 /* FSCryptorSupport.m */,
+				CEE9631E22F32B7669E6674EA0AD3F42 /* FSDBBaseGroupModel.h */,
+				71F8717A8CB4469C6727476C80DF18F1 /* FSDBBaseGroupModel.m */,
+				928AB776F1EBFF5925E39B50397D5994 /* FSDBGroupAPI.h */,
+				5C5ECA07ECBA69530F241B6EF5F043C7 /* FSDBGroupAPI.m */,
+				4819739C3798866C447B163ACD1A3C18 /* FSDBGroupModel.h */,
+				D4B727B38AD1E7893DB5BA332A9E5C54 /* FSDBGroupModel.m */,
+				1B480ABB155325C9AD4AB1A56C952B3D /* FSDBSupport.h */,
+				D02B22BC440D4212579057B082BE714D /* FSDBSupport.m */,
+				DADF0C9E0EC6F8F96E40D4520A8ECD0B /* FSKitDuty.h */,
+				90C3CEAC3AFF04B5DAD47BEC19CD2C29 /* FSKitDuty.m */,
+				FFA7B436C87DE538DB300A8CFE9C2937 /* FSMacro.h */,
+				65778D8469317EC160604AB666E6FB3E /* FSReachability.h */,
+				438B92048DC83F84CA5D2542CB990661 /* FSReachability.m */,
+				331619F78244335474A2305C102B7476 /* FSTrackKeys.h */,
+				9AA6FEEFEF0F52A9D2FBEDF1C87FDE74 /* Pod */,
+				AFFBE91D6C22313E5AE333D9BB82C4FB /* Support Files */,
+			);
+			name = FSJZKit;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		F2497F7DD87369E114D13F5D1E63B188 /* Pods */ = {
@@ -1453,6 +1453,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		341083B4DDD2907A4A3FE02159D0A8C5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793CB691FF5073C451A0A9271F75C5CE /* AppConfiger.h in Headers */,
+				F6096FD99E1F3384B6CB7DCE85DBDA2A /* FSAccountRecordController.h in Headers */,
+				7BA21FACC424E8589EE892F8797DE70F /* FSAPP.h in Headers */,
+				BE9892416CBCE872B5FEF68BF9D48FB0 /* FSAppConfig.h in Headers */,
+				E9CF07401F4F2AA8B2566109195749D9 /* FSAppConfigModel.h in Headers */,
+				471DF15D3E50A1F03016417EA608B94F /* FSAppModel.h in Headers */,
+				B45A866A31AF5199B58CE9ACFBA46607 /* FSBaseAPI.h in Headers */,
+				D214366DFB7344CC2BE752A6014755DD /* FSCommonGroupController.h in Headers */,
+				D876D67049769C0C4B20ED0D58D07649 /* FSCryptorSupport.h in Headers */,
+				6DD2909D579FB56643BCD553EEB0C125 /* FSDBBaseGroupModel.h in Headers */,
+				BDA3452069E103E413C4F091A93B5F79 /* FSDBGroupAPI.h in Headers */,
+				7C35E6739456CD4B51E7B59AAA114560 /* FSDBGroupModel.h in Headers */,
+				744B35F1317C91DD3A887B5741F9C2A0 /* FSDBSupport.h in Headers */,
+				5DDE593129C5A9B21CDDCFE0677B79C9 /* FSKitDuty.h in Headers */,
+				C14C107FB9E903D410E1EDA9E2FBCDB6 /* FSMacro.h in Headers */,
+				D5585CC69D0747667341FB08EEF491AA /* FSReachability.h in Headers */,
+				4803CE3A458DAEAB9C9A8A5CC3975CF2 /* FSTrackKeys.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		359BDE95EB16F713103E717F9E0BFBC0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1490,30 +1514,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C729C1DB288531E70018CFD7CEE27EFA /* FSShare.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C79D489ECE34F86D0A37FE00BE6BAB9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A98EA1219A0AD6040876F3504239DF8F /* AppConfiger.h in Headers */,
-				E13814786893BDB15CCB11B78B2DDFE4 /* FSAccountRecordController.h in Headers */,
-				907692D88481AF23F5288951C1B54058 /* FSAPP.h in Headers */,
-				2E89E9A773FEEDA6BF45AA6DE65A96D2 /* FSAppConfig.h in Headers */,
-				654E8DC90C746F44D96ACE9C965A56A5 /* FSAppConfigModel.h in Headers */,
-				A930B06A255D7682186AE6CA6216C867 /* FSAppModel.h in Headers */,
-				B26ECC5FE57C03791D0BD1B15C4CBA04 /* FSBaseAPI.h in Headers */,
-				E258EAFEB6163A9A2DDB884D2694CBF8 /* FSCommonGroupController.h in Headers */,
-				C7304AF86F46B0E349871912E98B3CA8 /* FSCryptorSupport.h in Headers */,
-				2747EB543EDCE106FA6D71D8CF9BD5C2 /* FSDBBaseGroupModel.h in Headers */,
-				DB8115CFB7100B7D0F9D793287B726D1 /* FSDBGroupAPI.h in Headers */,
-				640866325ADA02028FA6394BD4D90BFC /* FSDBGroupModel.h in Headers */,
-				3EB826FCF15E08527EF10A10B4D7F161 /* FSDBSupport.h in Headers */,
-				F255DC4C73E6E5CF163F17710DED54DB /* FSKitDuty.h in Headers */,
-				F7305326F6A26CD8231DFCB19D9FCA61 /* FSMacro.h in Headers */,
-				ED96D0917699565DFB8E079CB9CAE1D2 /* FSTrackKeys.h in Headers */,
-				A60A0F2BD49760C6FFC8942C1E34A8AB /* Reachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1670,8 +1670,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5693159D309727EAA785CDBA7C148CCF /* Build configuration list for PBXNativeTarget "FSJZKit" */;
 			buildPhases = (
-				5C79D489ECE34F86D0A37FE00BE6BAB9 /* Headers */,
-				515509BEA0B84D815C27C0ED0488EA3A /* Sources */,
+				341083B4DDD2907A4A3FE02159D0A8C5 /* Headers */,
+				C75B20BFC5D527FD8D2E162DFC98CC40 /* Sources */,
 				27F5D96521C166C0D3D4AE374BB17A1C /* Frameworks */,
 			);
 			buildRules = (
@@ -1987,28 +1987,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		515509BEA0B84D815C27C0ED0488EA3A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF574EE3EA3E8BB2D772D6200F5818A5 /* FSAccountRecordController.m in Sources */,
-				397D1E0A0739888B80A9C8E8EDC0E4AB /* FSAPP.m in Sources */,
-				0039599B15CF37720259F3EBE2279907 /* FSAppConfig.m in Sources */,
-				C8B3CC8BDA05434BBE67C0C2AA46215A /* FSAppConfigModel.m in Sources */,
-				3C5BC215C26767A978ECEF7F3B7E4D1F /* FSAppModel.m in Sources */,
-				C12FD2977EE7DF1CE552685C8B907780 /* FSBaseAPI.m in Sources */,
-				CE789DD7C391B40A4ADFBB8D22F00376 /* FSCommonGroupController.m in Sources */,
-				422F0CF28876DFAC82D37C9BB1688D3F /* FSCryptorSupport.m in Sources */,
-				144A725514D54AC65A5FEA969BCFE323 /* FSDBBaseGroupModel.m in Sources */,
-				6CA538209B5DEBDFC7B306555CE7AF34 /* FSDBGroupAPI.m in Sources */,
-				1E23A5D87AAA9AE962C3BB34127007A0 /* FSDBGroupModel.m in Sources */,
-				A2BA22956CF5B05E248E3BA1A917D0E2 /* FSDBSupport.m in Sources */,
-				8657857BFD39BCC697965B1FC0FA6FEB /* FSJZKit-dummy.m in Sources */,
-				66FE691353F0417EBA53DA92BC4BFAF8 /* FSKitDuty.m in Sources */,
-				771F7443561AE6C1A72893AEF719DF38 /* Reachability.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		65C2FAD80EF407FDEC0CEABA142D3D10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2105,6 +2083,28 @@
 			files = (
 				02FC34BEC3193CAADC4E1A6D32D4815F /* FSTuple-dummy.m in Sources */,
 				602A8C7A5111A9356A5CC668A3B26965 /* FSTuple.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C75B20BFC5D527FD8D2E162DFC98CC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B693432FE7CD480322A7AED8C424FE2 /* FSAccountRecordController.m in Sources */,
+				811C18E52A68AB10118F13A19C23DD8B /* FSAPP.m in Sources */,
+				2853C14F74742767A2037E41BB0D45D0 /* FSAppConfig.m in Sources */,
+				73F87ADA31D713741A5035678E2053F0 /* FSAppConfigModel.m in Sources */,
+				6469A3F4C13DD6521A9BCCDF3F533B9E /* FSAppModel.m in Sources */,
+				D8F926F7AD6F79D964D051290E2E099D /* FSBaseAPI.m in Sources */,
+				72E9F25FD44CE32661B23F38D25AF6C5 /* FSCommonGroupController.m in Sources */,
+				CE0A787D12D991A391DEC50164A90ABD /* FSCryptorSupport.m in Sources */,
+				BBBD3A4493AFFCB0B1FDA0BE60545BD3 /* FSDBBaseGroupModel.m in Sources */,
+				87B817102486EF0B462DBFA37F91181E /* FSDBGroupAPI.m in Sources */,
+				21E2656CE03586F22547A52420CAB740 /* FSDBGroupModel.m in Sources */,
+				55C0D1EFCF5CBDFBAB65BE42C88555FE /* FSDBSupport.m in Sources */,
+				D2BC955994D68222D88FECF85B460ED6 /* FSJZKit-dummy.m in Sources */,
+				E72DCD09D10A2D114A8C8CEC89F77078 /* FSKitDuty.m in Sources */,
+				9817261896C390A0347D713C11228CEC /* FSReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2765,7 +2765,7 @@
 		};
 		6F48BD6580745651C5545F40C5BF50C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA4E12545E5132277D77D29D84D2E241 /* FSJZKit.xcconfig */;
+			baseConfigurationReference = 889EA9794BCA8452E7017E9713DABBD5 /* FSJZKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3078,7 +3078,7 @@
 		};
 		D59F711F92CC6500BD8C8A1A176200B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA4E12545E5132277D77D29D84D2E241 /* FSJZKit.xcconfig */;
+			baseConfigurationReference = 889EA9794BCA8452E7017E9713DABBD5 /* FSJZKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

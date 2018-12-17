@@ -35,12 +35,12 @@
 }
 
 + (BOOL)noNet{
-    return ([self networkStatus] == NotReachable);
+    return ([self networkStatus] == FSNotReachable);
 }
 
-+ (NetworkStatus)networkStatus{
-    Reachability *r = [Reachability reachabilityForInternetConnection];
-    NetworkStatus status = [r currentReachabilityStatus];
++ (FSNetworkStatus)networkStatus{
+    FSReachability *r = [FSReachability reachabilityForInternetConnection];
+    FSNetworkStatus status = [r currentReachabilityStatus];
     return status;
 }
 
