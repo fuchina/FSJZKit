@@ -34,15 +34,15 @@
     return mArray;
 }
 
-//+ (BOOL)noNet{
-//    return ([self networkStatus] == FSNotReachable);
-//}
-//
-//+ (FSNetworkStatus)networkStatus{
-//    FSReachability *r = [FSReachability reachabilityForInternetConnection];
-//    FSNetworkStatus status = [r currentReachabilityStatus];
-//    return status;
-//}
++ (BOOL)noNet{
+    return ([self networkStatus] == FSNotReachable);
+}
+
++ (FSNetworkStatus)networkStatus{
+    FSReachability *r = [FSReachability reachabilityForInternetConnection];
+    FSNetworkStatus status = [r currentReachabilityStatus];
+    return status;
+}
 
 + (void)letModelEveryPropertyDefaultValue:(NSString *)value object:(id)object{
     if (value == nil || object == nil) {

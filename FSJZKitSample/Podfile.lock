@@ -7,7 +7,7 @@ PODS:
   - FSCryptor (0.0.1):
     - FSKit
   - FSDBMaster (0.0.1)
-  - FSJZKit (0.0.4):
+  - FSJZKit (0.0.5):
     - FSBaseController
     - FSCryptor
     - FSDBMaster
@@ -66,7 +66,7 @@ SPEC CHECKSUMS:
   FSCalculator: 3ab79307b008ebf07b4fa7fe827f418d7c65fd14
   FSCryptor: e31c168b6a541ac395a5cac6ad829cc8e1d47085
   FSDBMaster: 11fe5459459c30a00354577b946977b1b5dee162
-  FSJZKit: 481ad3a94a6a67d092436a97c91f03ab7f0b85e6
+  FSJZKit: a92b06e55b9450611b7390e93504ded50b2286f3
   FSKit: 1578169720d621fb12b806a8d0faf8ba95afb0e2
   FSShare: 67e546dc7de15cd46a71b3a497cd70d09cb1cb05
   FSToast: c168e006b160e4305f6bf828da66cdffcc20dbe7
@@ -79,6 +79,6 @@ SPEC CHECKSUMS:
   UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
   WechatOpenSDK: 3117412f8aafde4758cac1e8d20b93c67cafcfef
 
-PODFILE CHECKSUM: 0075065dbb59ffc5f7040cfacad6ac238b4a9e24
+PODFILE CHECKSUM: 57a555150b8b383b3195d76d7fa1e33e09b7d69f
 
 COCOAPODS: 1.6.0.beta.2

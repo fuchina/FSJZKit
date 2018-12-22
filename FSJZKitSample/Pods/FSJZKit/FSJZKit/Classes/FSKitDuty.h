@@ -13,13 +13,14 @@
 
 #import <UIKit/UIKit.h>
 #import <FSKit.h>
+#import "FSReachability.h"
 
 @interface FSKitDuty : NSObject
 
 + (NSArray *)maopaoArray:(NSArray *)array;
 
 + (BOOL)noNet;
-//+ (FSNetworkStatus)networkStatus;
++ (FSNetworkStatus)networkStatus;
 
 + (void)letModelEveryPropertyDefaultValue:(NSString *)value object:(id)object;
 
