@@ -14,14 +14,6 @@
 
 @implementation FSCryptor
 
-//+ (NSString *)aes256EncryptString:(NSString *)content{
-//    return [self aes256EncryptString:content password:[FSCryptorSupport localUserDefaultsCorePassword]];
-//}
-//
-//+ (NSString *)aes256DecryptString:(NSString *)str{
-//    return [self aes256DecryptString:str password:[FSCryptorSupport localUserDefaultsCorePassword]];
-//}
-
 + (NSString *)aes256EncryptString:(NSString *)content password:(NSString *)password{
     if (!content || !password) {
         return nil;

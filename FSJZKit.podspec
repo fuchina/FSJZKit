@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FSJZKit'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'FSJZKit is a tool for show logs when app run'
   s.description      = <<-DESC
 		This is a very small software library, offering a few methods to help with programming.
@@ -14,11 +14,9 @@ Pod::Spec.new do |s|
   
   s.source_files = 'FSJZKit/Classes/*.{h,m}'
 
-  s.dependency   'FSKit'
   s.dependency   'FSShare'
   s.dependency   'FSDBMaster'
   s.dependency   'FSViewToImage'
-  s.dependency   'FSTrack'
   s.dependency   'FSTuple'
   s.dependency   'FSCryptor'
   s.dependency   'FSBaseController'

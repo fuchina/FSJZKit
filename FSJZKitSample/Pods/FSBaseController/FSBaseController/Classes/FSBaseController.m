@@ -8,8 +8,6 @@
 
 #import "FSBaseController.h"
 #import "FSLeftItem.h"
-#import "FSViewManager.h"
-#import "FSTrack.h"
 
 typedef void(^FSBaseAlertBlock)(UIAlertView *bAlertView,NSInteger bIndex);
 

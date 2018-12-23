@@ -1,6 +1,6 @@
 {
   "name": "FSJZKit",
-  "version": "0.0.5",
+  "version": "0.0.7.1",
   "summary": "FSJZKit is a tool for show logs when app run",
   "description": "This is a very small software library, offering a few methods to help with programming.",
   "homepage": "https://github.com/fuchina/FSJZKit.git",
@@ -13,13 +13,10 @@
   },
   "source": {
     "git": "https://github.com/fuchina/FSJZKit.git",
-    "tag": "0.0.5"
+    "tag": "0.0.7.1"
   },
   "source_files": "FSJZKit/Classes/*.{h,m}",
   "dependencies": {
-    "FSKit": [
-
-    ],
     "FSShare": [
 
     ],
@@ -27,9 +24,6 @@
 
     ],
     "FSViewToImage": [
-
-    ],
-    "FSTrack": [
 
     ],
     "FSTuple": [

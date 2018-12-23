@@ -14,6 +14,7 @@
 #import "UIViewExt.h"
 #import "FuSoft.h"
 #import "FSKit.h"
+#import "FSTrack.h"
 
 #define FS_iPhone_X     [FSBaseController isIPhoneX]
 

@@ -15,8 +15,6 @@
     note：aes256加解密。
     AES是设计出来用于替代3DES的一种高级加密技术。
  */
-//+ (NSString *)aes256EncryptString:(NSString *)str;
-//+ (NSString *)aes256DecryptString:(NSString *)str;
 + (NSString *)aes256EncryptString:(NSString *)content password:(NSString *)password;
 + (NSString *)aes256DecryptString:(NSString *)str password:(NSString *)password;
 
