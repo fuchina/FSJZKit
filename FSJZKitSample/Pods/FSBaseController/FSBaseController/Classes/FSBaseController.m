@@ -241,6 +241,21 @@ typedef void(^FSBaseAlertBlock)(UIAlertView *bAlertView,NSInteger bIndex);
     return isPhoneX;
 }
 
++ (BOOL)isBigScreen{
+    static BOOL isBigScreen = NO;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        isBigScreen = (UIScreen.mainScreen.bounds.size.height > 800);
+    });
+    return isBigScreen;
+}
+
+- (void)event:(NSString *)event{
+    if ([event isKindOfClass:NSString.class] && event.length) {
+        [FSTrack event:event];        
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -16,7 +16,8 @@
 #import "FSKit.h"
 #import "FSTrack.h"
 
-#define FS_iPhone_X     [FSBaseController isIPhoneX]
+#define FS_iPhone_X         [FSBaseController isIPhoneX]
+#define FS_isBigScreen      [FSBaseController isBigScreen]
 
 typedef void(^GZSAdvancedBlock)(void);
 @interface FSBaseController : UIViewController
@@ -45,5 +46,11 @@ typedef void(^GZSAdvancedBlock)(void);
 - (void)showWaitView:(BOOL)show;
 
 + (BOOL)isIPhoneX;
++ (BOOL)isBigScreen;
+
+/*
+ * 做统计用，需要统计的方法直接调这个方法，传入不同的索引
+ */
+- (void)event:(NSString *)event;
 
 @end

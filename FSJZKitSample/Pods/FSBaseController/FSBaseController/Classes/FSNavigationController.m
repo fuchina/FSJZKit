@@ -38,6 +38,20 @@
 //        self.interactivePopGestureRecognizer.enabled = NO;
 //    }
     
+    static BOOL hasAssigned = NO;
+    static CGFloat h = 0;
+    static BOOL isBigScreen = NO;
+    if (!hasAssigned) {
+        hasAssigned = YES;
+        h = UIScreen.mainScreen.bounds.size.height;
+        isBigScreen = (h > 800);
+    }
+    if (isBigScreen) {
+        CGRect frame = self.tabBarController.tabBar.frame;
+        frame.origin.y = h - frame.size.height;
+        self.tabBarController.tabBar.frame = frame;
+    }
+    
     [super pushViewController:viewController animated:animated];
 }
 
