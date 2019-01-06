@@ -8,7 +8,6 @@
 
 #import "FSDBMaster.h"
 #import <sqlite3.h>
-//#import "FSRuntime.h"
 
 @interface FSDBMaster ()
 
@@ -16,7 +15,7 @@
 
 @end
 
-static const char *_SQLManagerQueue = "fsdbmaster.sync";
+static const char *_sync_queue = "fsdbmaster.sync";
 @implementation FSDBMaster{
     dispatch_queue_t    _queue;
 }
@@ -40,7 +39,7 @@ static FSDBMaster *_instance = nil;
 - (instancetype)init{
     self = [super init];
     if (self) {
-        _queue = dispatch_queue_create(_SQLManagerQueue, DISPATCH_QUEUE_SERIAL);
+        _queue = dispatch_queue_create(_sync_queue, DISPATCH_QUEUE_SERIAL);
         [self generateHandlerWithDBName:_db_first_name];
     }
     return self;
@@ -113,7 +112,7 @@ static FSDBMaster *_instance = nil;
     return path;
 }
 
-- (NSString *)createTableIfNotExists:(NSString *)tableName fields:(NSArray<NSString *> *)properties{
+- (NSString *)createTableIfNotExists:(nonnull NSString *)tableName fields:(nonnull NSArray<NSString *> *)properties{
     if (!([properties isKindOfClass:NSArray.class] && properties.count)) {
         return @"fields 为空";
     }
@@ -153,30 +152,38 @@ static FSDBMaster *_instance = nil;
     // PRIMARY KEY 是唯一的，每条数据不能相同
     //    NSString *sql = @"CREATE TABLE IF NOT EXISTS UserTable ( time TEXT NOT NULL PRIMARY KEY,atype TEXT NOT NULL,btype TEXT NOT NULL,je TEXT,bz TEXT,sr TEXT, cb TEXT, ys TEXT, xj TEXT, ch TEXT, tz TEXT, tx TEXT, fz TEXT);";
     NSString *sql = [[NSString alloc] initWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (%@);",tableName,append];
-    NSString *e = [self execSQL:sql type:@"创建表"];
+    NSString *e = [self execSQL:sql];
     if (e) {
-        return @"创建表失败";
+        return [[NSString alloc] initWithFormat:@"发生错误，%@",e];
     }
     return nil;
 }
 
-/*
- @"INSERT INTO %@ (time,name,loti,lati) VALUES ('%@','%@','%@','%@');";
- */
-- (NSString *)insertSQL:(NSString *)sql fields:(NSArray<NSString *> *)fields table:(NSString *)table{
-    if (!([table isKindOfClass:NSString.class] && table.length)) {
-        return @"表名为空";
-    }
-    NSString *error = [self createTableIfNotExists:table fields:fields];
-    if (error) {
-        return error;
-    }
-    return [self execSQL:sql type:@"新增数据"];
+- (NSString *)execSQL:(NSString *)sql{
+    __block NSString *errMSG = nil;
+    dispatch_sync(_queue, ^{
+        sqlite3_stmt *stmt = nil;
+        int result = sqlite3_prepare_v2(self->_sqlite3, sql.UTF8String, -1, &stmt, NULL);
+        if (result == SQLITE_OK) {
+            int code = sqlite3_step(stmt);
+            if (code != SQLITE_DONE) {
+                errMSG = [[NSString alloc] initWithFormat:@"错误码:%d",code];
+            }
+        } else {
+            errMSG = [[NSString alloc] initWithFormat:@"错误码:%d",result];
+        }
+        sqlite3_finalize(stmt);stmt = NULL;
+    });
+    return errMSG;
+}
+
+- (NSString *)insertSQL:(NSString *)sql{
+    return [self execSQL:sql];
 }
 
 - (NSString *)insert_fields_values:(NSDictionary<NSString *,id> *)list table:(NSString *)table{
     if (!([table isKindOfClass:NSString.class] && table.length)) {
-        return @"insertSQL : table name is null or non_length";
+        return @"insertSQL : table name's length is zero";
     }
     
     if (!([list isKindOfClass:NSDictionary.class] && list.count)) {
@@ -186,22 +193,23 @@ static FSDBMaster *_instance = nil;
     NSArray *keys = list.allKeys;
     BOOL isTableExist = [self checkTableExist:table];
     if (!isTableExist) {
-        [self insertSQL:nil fields:keys table:table];
+        NSString *e = [self createTableIfNotExists:table fields:keys];
+        if (e) {
+            return e;
+        }
     }
     
     NSInteger count = keys.count;
     NSMutableString *whys = [[NSMutableString alloc] init];
     NSString *fies = [keys componentsJoinedByString:@","];
-    static NSString *_key_why = @"?";
-    static NSString *_key_why_space = @",?";
     for (int x = 0; x < count; x ++) {
-        if (x) {
-            [whys appendString:_key_why_space];
+        if (x == 0) {
+            [whys appendFormat:@":%@",keys[x]];
         }else{
-            [whys appendString:_key_why];
+            [whys appendFormat:@",:%@",keys[x]];
         }
     }
-    NSString *insert_sql = [[NSString alloc] initWithFormat:@"INSERT INTO %@ (%@) VALUES (%@)",table,fies,whys];
+    NSString *insert_sql = [[NSString alloc] initWithFormat:@"INSERT INTO %@ (%@) VALUES (%@);",table,fies,whys];
 
     sqlite3_stmt *stmt;
     if (sqlite3_prepare_v2(_sqlite3, insert_sql.UTF8String, -1, &stmt, nil) == SQLITE_OK) {
@@ -220,24 +228,46 @@ static FSDBMaster *_instance = nil;
     
     int result = sqlite3_step(stmt);
     if (result != SQLITE_DONE) {
-        sqlite3_finalize(stmt);
+        sqlite3_finalize(stmt);stmt = NULL;
         return @"insertSQL : sqlite3_step(stmt) failed";
     }
     return nil;
 }
 
 - (NSString *)deleteSQL:(NSString *)sql{
-    return [self execSQL:sql type:@"删除数据"];
+    return [self execSQL:sql];
+}
+
+- (NSString *)deleteSQL:(NSString *)table aid:(NSNumber *)aid{
+    if (([table isKindOfClass:NSString.class] && table.length && aid)) {
+        return @"参数错误";
+    }
+    NSString *sql = [[NSString alloc] initWithFormat:@"DELETE FROM %@ WHERE aid = %@;",table,aid];
+    return [self deleteSQL:sql];
 }
 
 /*
  更新  eg.
  @"UPDATE %@ SET lati = '%@',loti = '%@' WHERE aid = %@;"
  */
-- (NSString *)updateWithSQL:(NSString *)sql{
-    return [self execSQL:sql type:@"更新数据"];
+- (NSString *)updateSQL:(NSString *)sql{
+    return [self execSQL:sql];
 }
 
+//- (NSString *)update:(NSString *)table keyValues:(NSDictionary *)keyValues{
+//    if (!([table isKindOfClass:NSString.class] && table.length && [keyValues isKindOfClass:NSDictionary.class] && keyValues.count)) {
+//        return @"参数错误";
+//    }
+//    NSArray *keys = keyValues.allKeys;
+//    NSMutableArray *bids = [[NSMutableArray alloc] init];
+//    for (int x = 0; x < keys.count; x ++) {
+//
+//    }
+//    NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET lati = '%@',loti = '%@' WHERE aid = %@;",table];
+//    return nil;
+//}
+
+// 被high_execSQL:方法替代
 - (NSString *)execSQL:(NSString *)SQL type:(NSString *)type{
     if (!([SQL isKindOfClass:NSString.class] && SQL.length)) {
         return @"语句为空";
@@ -408,7 +438,7 @@ static FSDBMaster *_instance = nil;
     }
     
     NSString *sql = [[NSString alloc] initWithFormat:@"ALTER TABLE '%@' ADD '%@' TEXT NULL DEFAULT '%@';",table,field,value?:@""];
-    NSString *error = [self execSQL:sql type:nil];
+    NSString *error = [self execSQL:sql];
     return error;
 }
 
@@ -417,8 +447,7 @@ static FSDBMaster *_instance = nil;
         return @"表名为空";
     }
     NSString *sql = [[NSString alloc] initWithFormat:@"DROP TABLE %@",table];
-    NSString *type = [[NSString alloc] initWithFormat:@"删除表'%@'",table];
-    NSString *error = [self execSQL:sql type:type];
+    NSString *error = [self execSQL:sql];
     return error;
 }
 
@@ -488,6 +517,10 @@ int checkTableCallBack(void *param, int f_num, char **f_value, char **f_name){
                 str = [[NSString alloc] initWithUTF8String:cValue];// 如果charValue为NULL会Crash
             }
         }else if (cType == SQLITE_BLOB || cType == SQLITE_NULL){
+            const void *bytes = sqlite3_column_blob(stmt, x);
+            if (bytes != NULL) {
+                str = [[NSData alloc] initWithBytes:bytes length:sqlite3_column_bytes(stmt,x)];
+            }
         }else if (cType == SQLITE_INTEGER){
             int cValue = sqlite3_column_int(stmt,x);
             str = @(cValue);
@@ -567,6 +600,77 @@ static NSString     *_field_type = @"field_type";
 
 + (int)sqlite3_threadsafe{
     return sqlite3_threadsafe();
+}
+
+/******************************************************* 二进制存储 ************************************************************/    
+
+- (NSString *)insertData:(nonnull NSData *)data table:(nonnull NSString *)table key:(nonnull NSString *)key{
+    if (![data isKindOfClass:NSData.class]) {
+        return [self errorString:@"Data参数错误" sel:_cmd line:__LINE__];
+    }
+    if (!([table isKindOfClass:NSString.class] && table.length)) {
+        return [self errorString:@"表名为空" sel:_cmd line:__LINE__];
+    }
+    if (!([key isKindOfClass:NSString.class] && key.length)) {
+        return [self errorString:@"key为空" sel:_cmd line:__LINE__];
+    }
+    
+    BOOL exist = [self checkTableExist:table];
+    if (exist) {
+        NSString *sql = [[NSString alloc] initWithFormat:@"select count(*) from %@ where ky = '%@'",table,key];
+        NSInteger count = [self countWithSQL:sql table:table];
+        if (count > 0) {
+            return @"key值已存在";
+        }
+    }else{  // 创建表
+        NSString *createTable = [[NSString alloc] initWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (aid INTEGER PRIMARY KEY autoincrement,tm TEXT,ky TEXT,dt BLOB);",table];
+        NSString *e = [self execSQL:createTable];
+        if (e) {
+            return e;
+        }
+    }
+    
+    dispatch_sync(_queue, ^{
+        sqlite3_stmt *stmt;
+        NSString *iSQL = [[NSString alloc] initWithFormat:@"INSERT INTO %@ (tm,ky,dt) VALUES (:tm,:ky,:dt)",table];
+        const char *charSQL = [iSQL UTF8String];
+        int result = sqlite3_prepare_v2(self->_sqlite3,charSQL,-1,&stmt,0);
+        
+//        int count = sqlite3_bind_parameter_count(stmt);
+//        const char *ont = sqlite3_bind_parameter_name(stmt, 1);
+//        const char *two = sqlite3_bind_parameter_name(stmt, 2);
+//        const char *thr = sqlite3_bind_parameter_name(stmt, 3);
+        
+        int tmIdx = sqlite3_bind_parameter_index(stmt, ":tm");
+        int kyIdx = sqlite3_bind_parameter_index(stmt, ":ky");
+        int dtIdx = sqlite3_bind_parameter_index(stmt, ":dt");
+        
+        BOOL isOK = (SQLITE_OK == result);
+        if (isOK) {
+            sqlite3_bind_text(stmt, tmIdx, @((NSInteger)NSDate.date.timeIntervalSince1970).stringValue.UTF8String, -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(stmt, kyIdx, key.UTF8String, -1, SQLITE_TRANSIENT);
+            sqlite3_bind_blob64(stmt,dtIdx,data.bytes, data.length, SQLITE_TRANSIENT);
+            
+            int v = sqlite3_step(stmt);
+            if (v == SQLITE_DONE) {
+                // ok
+            }
+        }
+        sqlite3_finalize(stmt);stmt = NULL;
+    });
+    return nil;
+}
+
+- (NSString *)errorString:(NSString *)descrition sel:(SEL)sel line:(int)line{
+    if (sel && descrition) {
+#if DEBUG || TEST
+        NSString *error = [[NSString alloc] initWithFormat:@"\n%@\n%@\nLine:%d\n%@",self.class,NSStringFromSelector(sel),line,descrition];
+        return error;
+#else
+        return descrition;
+#endif
+    }
+    return @"FSDBMaster:unknown error";
 }
 
 @end

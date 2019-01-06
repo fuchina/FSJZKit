@@ -32,10 +32,16 @@
             return nil;
         }
         NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET content = '%@' WHERE aid = %@;",_tb_appcfg,value,model.aid];
-        return [master updateWithSQL:sql];
+        return [master updateSQL:sql];
+        // return [master updateWithSQL:sql];
     }
-    NSString *sql = [[NSString alloc] initWithFormat:@"INSERT INTO %@ (time,type,content) VALUES ('%@','%@','%@');",_tb_appcfg,@(_fs_integerTimeIntevalSince1970()),key,value];
-    NSString *error = [master insertSQL:sql fields:FSAppConfigModel.tableFields table:_tb_appcfg];
+//    NSString *sql = [[NSString alloc] initWithFormat:@"INSERT INTO %@ (time,type,content) VALUES ('%@','%@','%@');",_tb_appcfg,@(_fs_integerTimeIntevalSince1970()),key,value];
+    NSString *error = [master insert_fields_values:@{
+                                                     @"time":@(_fs_integerTimeIntevalSince1970()),
+                                                     @"type":key,
+                                                     @"content":value,
+                                                     } table:_tb_appcfg];
+    // NSString *error = [master insertSQL:sql fields:FSAppConfigModel.tableFields table:_tb_appcfg];
     return error;
 }
 

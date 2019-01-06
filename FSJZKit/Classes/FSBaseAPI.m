@@ -62,7 +62,7 @@
     NSNumber *aid = [FSRuntime valueForGetSelectorWithPropertyName:@"aid" object:model];
     FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET %@ = '%@' WHERE aid = %@;",table,field,newFreq,aid];
-    NSString *error = [master updateWithSQL:sql];
+    NSString *error = [master updateSQL:sql];
     return error;
 }
 
@@ -72,7 +72,7 @@
     }
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET %@ = '%@' WHERE aid = %@;",table,field,value,aid];
     FSDBMaster *master = [FSDBMaster sharedInstance];
-    return [master updateWithSQL:sql];
+    return [master updateSQL:sql];
 }
 
 @end

@@ -52,8 +52,15 @@
         list = [master querySQL:sql tableName:_tb_group];
     }
     
-    NSString *iSql = [[NSString alloc] initWithFormat:@"INSERT INTO %@ (time,name,type,link,freq) VALUES ('%@','%@','%@','%@','0');",_tb_group,@(time),name,type,link];
-    NSString *error = [master insertSQL:iSql fields:FSDBGroupModel.tableFields table:_tb_group];
+//    NSString *iSql = [[NSString alloc] initWithFormat:@"INSERT INTO %@ (time,name,type,link,freq) VALUES ('%@','%@','%@','%@','0');",_tb_group,@(time),name,type,link];
+    NSString *error = [master insert_fields_values:@{
+                                                     @"time":@(time),
+                                                     @"name":name,
+                                                     @"type":type,
+                                                     @"link":link,
+                                                     @"freq":@"0"
+                                                     } table:_tb_group];
+//    NSString *error = [master insertSQL:iSql fields:FSDBGroupModel.tableFields table:_tb_group];
     return error;
 }
 
@@ -138,7 +145,8 @@
     NSInteger freq = [model.freq integerValue] + 1;
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET freq = '%@' WHERE aid = %@;",_tb_group,@(freq),model.aid];
     FSDBMaster *master = [FSDBMaster sharedInstance];
-    [master updateWithSQL:sql];
+    [master updateSQL:sql];
+    // [master updateWithSQL:sql];
 }
 
 + (NSString *)titleForTable:(NSString *)table{
@@ -222,7 +230,8 @@
     }
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET link = '%@' WHERE aid = %@;",_tb_group,zone,model.aid];
     FSDBMaster *master = [FSDBMaster sharedInstance];
-    NSString *error = [master updateWithSQL:sql];
+    NSString *error = [master updateSQL:sql];
+    // NSString *error = [master updateWithSQL:sql];
     return error;
 }
 
@@ -232,7 +241,8 @@
     }
     FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *select = [[NSString alloc] initWithFormat:@"UPDATE %@ SET name = '%@' WHERE (type = '%@' and aid = %@);",_tb_group,name,table,model.aid];
-    NSString *error = [master updateWithSQL:select];
+    NSString *error = [master updateSQL:select];
+    // NSString *error = [master updateWithSQL:select];
     return error;
 }
 

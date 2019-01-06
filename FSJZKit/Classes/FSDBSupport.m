@@ -220,7 +220,8 @@
     }
     
     NSString *sql = [[NSString alloc] initWithFormat:@"ALTER TABLE '%@' ADD '%@' TEXT NULL DEFAULT '%@';",table,field,value?:@""];
-    NSString *error = [master execSQL:sql type:nil];
+    NSString *error = [master execSQL:sql];
+    // NSString *error = [master execSQL:sql type:nil];
     return error;
 }
 
@@ -252,7 +253,8 @@
     }
 
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET %@ = '%@';",table,field,value?:@""];
-    NSString *error = [master updateWithSQL:sql];
+    NSString *error = [master updateSQL:sql];
+    // NSString *error = [master updateWithSQL:sql];
     return error;
 }
 
