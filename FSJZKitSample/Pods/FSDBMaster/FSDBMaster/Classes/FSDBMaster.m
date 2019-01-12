@@ -213,15 +213,19 @@ static FSDBMaster *_instance = nil;
 
     sqlite3_stmt *stmt;
     if (sqlite3_prepare_v2(_sqlite3, insert_sql.UTF8String, -1, &stmt, nil) == SQLITE_OK) {
+        Class _class_NSString = NSString.class;
         for (NSString *k in keys) {
-            @autoreleasepool{
-                NSString *nk = [[NSString alloc] initWithFormat:@":%@",k];
-                const char *kc = nk.UTF8String;
-                int idx = sqlite3_bind_parameter_index(stmt, kc);
-                if (idx > 0) {
-                    NSString *v = [list objectForKey:k];
-                    sqlite3_bind_text(stmt, idx, v.UTF8String, -1, SQLITE_STATIC);
+            NSString *nk = [[NSString alloc] initWithFormat:@":%@",k];
+            const char *kc = nk.UTF8String;
+            int idx = sqlite3_bind_parameter_index(stmt, kc);
+            if (idx > 0) {
+                NSString *v = [list objectForKey:k];
+                if (![v isKindOfClass:_class_NSString]) {
+                    v = v.description;
                 }
+                sqlite3_bind_text(stmt, idx, v.UTF8String, -1, SQLITE_STATIC);
+            }else{
+                NSAssert(idx > 0, @"idx <= 0");
             }
         }
     }
@@ -501,6 +505,7 @@ int checkTableCallBack(void *param, int f_num, char **f_value, char **f_name){
 - (NSDictionary *)dictionaryFromStmt:(sqlite3_stmt *)stmt{
     NSMutableDictionary *last = [[NSMutableDictionary alloc] init];
     int count = sqlite3_column_count(stmt);
+    static NSString *noLenghthString = @"";
     for (int x = 0; x < count; x ++) {
         const char *cname = sqlite3_column_name(stmt, x);
         if (cname == NULL) {
@@ -509,7 +514,6 @@ int checkTableCallBack(void *param, int f_num, char **f_value, char **f_name){
         NSString *name = [[NSString alloc] initWithUTF8String:cname];
         
         int cType = sqlite3_column_type(stmt, x);
-        static NSString *noLenghthString = @"";
         id str = noLenghthString;
         if (cType == SQLITE_TEXT) {
             const char *cValue = (char *)sqlite3_column_text(stmt, x);
@@ -528,7 +532,12 @@ int checkTableCallBack(void *param, int f_num, char **f_value, char **f_name){
             float cValue = sqlite3_column_double(stmt, x);
             str = @(cValue);
         }
-        [last setObject:str forKey:name];
+        
+        if (str) {
+            [last setObject:str forKey:name];
+        }else{
+            [last setObject:noLenghthString forKey:name];
+        }
     }
     return last;
 }
