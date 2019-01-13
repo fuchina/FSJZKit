@@ -108,6 +108,7 @@ static NSString     *_you_dont_know = @"Email_System_Future";
 + (NSString *)localUserDefaultsCorePassword{
     if (!_fs_isValidateString(_corePwd)) {
         NSString *saved = _fs_userDefaults_objectForKey([self soleKey]);
+        NSLog(@"saved:%@,soleKey:%@",saved,[self soleKey]);
         if (saved) {
             _corePwd = [FSCryptor aes256DecryptString:saved password:_safe_key];
         }
@@ -116,12 +117,12 @@ static NSString     *_you_dont_know = @"Email_System_Future";
     return corePwd;
 }
 
-+ (NSString *)aes256EncryptString:(NSString *)content{
-    return [FSCryptor aes256EncryptString:content password:[self localUserDefaultsCorePassword]];
-}
-
-+ (NSString *)aes256DecryptString:(NSString *)str{
-    return [FSCryptor aes256DecryptString:str password:[self localUserDefaultsCorePassword]];
-}
+//+ (NSString *)aes256EncryptString:(NSString *)content{
+//    return [FSCryptor aes256EncryptString:content password:[self localUserDefaultsCorePassword]];
+//}
+//
+//+ (NSString *)aes256DecryptString:(NSString *)str{
+//    return [FSCryptor aes256DecryptString:str password:[self localUserDefaultsCorePassword]];
+//}
 
 @end
