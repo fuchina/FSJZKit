@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/FSAppConfigModel.h
+../../../../../FSJZKit/classes/FSAppConfigModel.h

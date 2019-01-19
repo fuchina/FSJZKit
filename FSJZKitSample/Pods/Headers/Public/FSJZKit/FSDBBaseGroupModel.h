@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/FSDBBaseGroupModel.h
+../../../../../FSJZKit/classes/FSDBBaseGroupModel.h

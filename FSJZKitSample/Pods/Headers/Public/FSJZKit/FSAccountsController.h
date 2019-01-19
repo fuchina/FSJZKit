@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/FSAccountsController.h
+../../../../../FSJZKit/classes/FSAccountsController.h

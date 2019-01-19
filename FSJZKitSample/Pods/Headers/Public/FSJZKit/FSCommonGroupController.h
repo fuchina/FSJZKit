@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/FSCommonGroupController.h
+../../../../../FSJZKit/classes/FSCommonGroupController.h

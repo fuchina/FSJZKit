@@ -7,7 +7,7 @@ PODS:
   - FSCryptor (0.0.2):
     - FSKit
   - FSDBMaster (0.0.3)
-  - FSJZKit (0.1.1):
+  - FSJZKit (0.1.2):
     - FSBaseController
     - FSCryptor
     - FSDBMaster
@@ -64,7 +64,7 @@ SPEC CHECKSUMS:
   FSCalculator: 3ab79307b008ebf07b4fa7fe827f418d7c65fd14
   FSCryptor: 6d576b427b355d19d23b46d4fda560e8c30c5214
   FSDBMaster: a97c4d790af559d00a23e5bd6cd49ee27a35049a
-  FSJZKit: f73f907dddf18eea8c85fd1f9eb3d7b234179cf5
+  FSJZKit: e1c478ceffebd3bba9397dc8d321498b17b9015e
   FSKit: 1578169720d621fb12b806a8d0faf8ba95afb0e2
   FSShare: 67e546dc7de15cd46a71b3a497cd70d09cb1cb05
   FSToast: c168e006b160e4305f6bf828da66cdffcc20dbe7

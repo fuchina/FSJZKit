@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/FSPublic.h
+../../../../../FSJZKit/classes/FSPublic.h

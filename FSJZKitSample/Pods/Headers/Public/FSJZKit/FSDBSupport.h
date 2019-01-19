@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/FSDBSupport.h
+../../../../../FSJZKit/classes/FSDBSupport.h

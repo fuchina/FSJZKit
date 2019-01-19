@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/FSKitDuty.h
+../../../../../FSJZKit/classes/FSKitDuty.h

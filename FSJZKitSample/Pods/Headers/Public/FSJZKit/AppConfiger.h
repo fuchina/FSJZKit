@@ -1,1 +1,1 @@
-../../../../../FSJZKit/Classes/AppConfiger.h
+../../../../../FSJZKit/classes/AppConfiger.h
