@@ -18,7 +18,7 @@
 
 + (NSArray *)maopaoArray:(NSArray *)array;
 
-+ (BOOL)noNet;
+//+ (BOOL)noNet;
 //+ (FSNetworkStatus)networkStatus;
 
 + (void)letModelEveryPropertyDefaultValue:(NSString *)value object:(id)object;

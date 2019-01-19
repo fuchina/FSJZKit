@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, FSDBGroupType) {
 #define APPCOLOR                   RGBCOLOR(250, 80, 100, 1)    // 差不多是苹果news的LOGO颜色
 #define HAAPPCOLOR                 RGBCOLOR(246, 105, 128, 1)
 #define FS_RedColor                RGBCOLOR(249, 49, 105, 1)
-#define FS_GreenColor              RGBCOLOR(64, 171, 62, 1)
+#define FS_GreenColor              RGBCOLOR(0x20, 0xbf, 0x66, 1)
 
 #define FS_TextColor_Dark          RGBCOLOR(16,16,16,1)
 #define FS_TextColor_Normal        RGBCOLOR(88,88,88,1)
