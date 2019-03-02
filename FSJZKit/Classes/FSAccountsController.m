@@ -9,22 +9,17 @@
 #import "FSAccountsController.h"
 #import "FSDBSupport.h"
 #import <MessageUI/MessageUI.h>
-//#import "FSAccountConfiger.h"
 #import "FSABNameModel.h"
-//#import "FSDBTool.h"
 //#import "FSHTMLController.h"
 #import "FSShare.h"
 #import <MJRefresh.h>
 #import "UIViewController+BackButtonHandler.h"
-#import "FSAPP.h"
 //#import "FSWebKitController.h"
 #import "AppConfiger.h"
 #import "FSBaseAPI.h"
 #import <FSUIKit.h>
 #import <FSDate.h>
-#import "FSTrack.h"
-#import "FSTrackKeys.h"
-#import "FSKitDuty.h"
+//#import "FSKitDuty.h"
 
 @interface FSAccountsController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -46,7 +41,7 @@
 }
 
 - (void)accountExplain{
-    [self event:_UMeng_Event_acc_show];
+//    [self event:_UMeng_Event_acc_show];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"note" ofType:@"pdf"];
 //    FSHTMLController *html = [[FSHTMLController alloc] init];
 //    html.title = @"说明";
@@ -297,15 +292,6 @@
 
 - (void)updateFreq:(FSABNameModel *)model{
     [FSBaseAPI addFreq:_tb_abname field:@"freq" model:model];
-}
-
--(BOOL)navigationShouldPopOnBackButton{
-    BOOL success = [FSKit popToController:@"HAToolController" navigationController:self.navigationController animated:YES];
-    BOOL bSuccess = [FSKit popToController:@"FSCompanyPartController" navigationController:self.navigationController animated:YES];
-    if (!(success || bSuccess)) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    return NO;
 }
 
 - (void)didReceiveMemoryWarning {
