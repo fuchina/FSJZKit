@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BEA0E646CDF94641EF3E876077C4B130"
+               BlueprintIdentifier = "CF3DC755FB797E95B5457D0A8425603F"
+               BuildableName = "UMengAnalytics"
                BlueprintName = "UMengAnalytics"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "UMengAnalytics">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

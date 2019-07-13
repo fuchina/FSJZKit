@@ -1,2 +1,0 @@
-# FSJZKit
-Jinzha Kit

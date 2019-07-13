@@ -11,6 +11,7 @@
 #import <FSToast.h>
 #import <FSUIKit.h>
 #import <FSKit.h>
+#import <FSImage.h>
 
 @interface FSShare ()<MFMessageComposeViewControllerDelegate,MFMailComposeViewControllerDelegate>
 
@@ -64,7 +65,7 @@ static FSShare *_instance = nil;
         return;
     }
     
-    UIImage *thumbImage = [FSUIKit compressImage:image width:50];
+    UIImage *thumbImage = [FSImage compressImage:image width:50];
     
     WXMediaMessage *message = [WXMediaMessage message];
     [message setThumbImage:thumbImage];

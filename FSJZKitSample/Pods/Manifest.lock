@@ -7,7 +7,7 @@ PODS:
   - FSCryptor (0.0.2):
     - FSKit
   - FSDBMaster (0.0.3)
-  - FSJZKit (1.0.0):
+  - FSJZKit (1.2):
     - FSBaseController
     - FSCryptor
     - FSDBMaster
@@ -15,7 +15,7 @@ PODS:
     - FSTuple
     - FSViewToImage
   - FSKit (1.3.2.2)
-  - FSShare (0.0.2):
+  - FSShare (0.1):
     - FSKit
     - FSToast
     - FSUIKit
@@ -24,7 +24,7 @@ PODS:
   - FSTrack (0.0.1):
     - UMengAnalytics
   - FSTuple (0.0.1)
-  - FSUIKit (0.0.8):
+  - FSUIKit (0.0.9):
     - FSCalculator
     - FSWindow
     - MJRefresh (= 3.1.15.7)
@@ -64,13 +64,13 @@ SPEC CHECKSUMS:
   FSCalculator: 3ab79307b008ebf07b4fa7fe827f418d7c65fd14
   FSCryptor: 6d576b427b355d19d23b46d4fda560e8c30c5214
   FSDBMaster: a97c4d790af559d00a23e5bd6cd49ee27a35049a
-  FSJZKit: aa9bd68692d7370c5c831d6ede34f6483d1369ff
+  FSJZKit: 08e625f459d4670b4141b5543f8d9d935df798b7
   FSKit: 1578169720d621fb12b806a8d0faf8ba95afb0e2
-  FSShare: 67e546dc7de15cd46a71b3a497cd70d09cb1cb05
+  FSShare: bb90a86b4eb93086a825af357d4e4626dcb69485
   FSToast: c168e006b160e4305f6bf828da66cdffcc20dbe7
   FSTrack: f71ebfd16b15dad94cd816333fd1cb3ba2cd775e
   FSTuple: 1a139e02e1cb575d527cc69e035b24eb2c71333e
-  FSUIKit: 393ca90863cb6007b46d36fd20b39bb240b39fe3
+  FSUIKit: dbfed46551a410f0d781378f4432f6fa02dbf8cf
   FSViewToImage: 97823552fda41b19d945897038b335b360f79ad8
   FSWindow: 54dce45874a001ba7761303c89f478a7b9197ad2
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
@@ -79,4 +79,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 57a555150b8b383b3195d76d7fa1e33e09b7d69f
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.1

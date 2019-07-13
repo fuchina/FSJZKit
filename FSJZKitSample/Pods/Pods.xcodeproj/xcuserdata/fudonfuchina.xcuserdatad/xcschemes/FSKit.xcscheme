@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22DFE27FBAC47ADF43494E34FE5EA2CF"
+               BlueprintIdentifier = "0CBBAEDB6A432E6283C61F48F90D384D"
+               BuildableName = "libFSKit.a"
                BlueprintName = "FSKit"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libFSKit.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

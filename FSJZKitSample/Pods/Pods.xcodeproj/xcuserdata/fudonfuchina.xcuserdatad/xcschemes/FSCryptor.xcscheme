@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CFD2DC418244B7A681FF75BF0BCF169B"
+               BlueprintIdentifier = "1510F985C12F3BB3FF1DE45542415BFA"
+               BuildableName = "libFSCryptor.a"
                BlueprintName = "FSCryptor"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libFSCryptor.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

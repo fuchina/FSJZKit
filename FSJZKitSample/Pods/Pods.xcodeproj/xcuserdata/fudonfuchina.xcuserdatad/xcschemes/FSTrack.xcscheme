@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01E50AE643E33FA09DE1D03C7E69EB45"
+               BlueprintIdentifier = "93FAF9B8EDB4A34EA92F72F03E46F4B9"
+               BuildableName = "libFSTrack.a"
                BlueprintName = "FSTrack"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libFSTrack.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
