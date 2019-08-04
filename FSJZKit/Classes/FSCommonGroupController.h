@@ -14,6 +14,9 @@
 
 @interface FSCommonGroupController : FSBaseController
 
+@property (nonatomic,assign) BOOL   isSearchShow;
+@property (nonatomic,copy) NSString *searchPH;
+
 @property (nonatomic,copy) NSString *table; // 表名，密码、日记、卡号等
 @property (nonatomic,copy) NSString *link;  // 在**文件夹内，link为空是顶级文件夹
 
@@ -21,5 +24,8 @@
 @property (nonatomic,copy) void (^addData)(NSString *zone,NSString *name);
 // 查看数据
 @property (nonatomic,copy) void (^seeData)(NSString *zone,NSString *name);
+
+// 搜索结果的视图
+@property (nonatomic,copy) UIView* (^searchResultView) (UIView *view);
 
 @end

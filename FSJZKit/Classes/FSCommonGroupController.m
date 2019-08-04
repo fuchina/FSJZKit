@@ -13,6 +13,7 @@
 #import "FSHalfView.h"
 #import <FSUIKit.h>
 #import "FSMacro.h"
+#import "FSABSearchController.h"
 
 @interface FSCommonGroupController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -46,6 +47,28 @@
     }, ^{
         [self commonGroupDesignViews];
     });
+}
+
+- (void)searchAction{
+    FSABSearchController *search = [[FSABSearchController alloc] init];
+    search.placeholder = self.searchPH;
+    [self.navigationController pushViewController:search animated:YES];
+    __weak typeof(self)this = self;
+    search.searchEvent = ^(FSABSearchController *vc, NSString *text) {
+        if (text.length) {
+            [this searchResult:text controller:vc];
+        }
+    };
+//    search.resultTableView = ^UITableView *(FSABSearchController *searchController) {
+//        FSBestCellView *view = (FSBestCellView *)searchController.resultView;
+//        return view.tableView.tableView;
+//    };
+}
+
+- (void)searchResult:(NSString *)text controller:(FSABSearchController *)controller{
+    if (self.searchResultView) {
+        controller.resultView = self.searchResultView(controller.resultView);
+    }
 }
 
 - (void)bbiAction{  //只能增加目录
@@ -105,7 +128,12 @@
         self.title = [FSDBGroupAPI titleForTable:_table];
 
         UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
-        self.navigationItem.rightBarButtonItem = bbi;
+        if (self.isSearchShow) {
+            UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchAction)];
+            self.navigationItem.rightBarButtonItems = @[bbi,search];
+        }else{
+            self.navigationItem.rightBarButtonItem = bbi;
+        }
         
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, WIDTHFC, HEIGHTFC - 64) style:UITableViewStylePlain];
         _tableView.delegate = self;
