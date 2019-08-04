@@ -13,7 +13,6 @@
 #import "FSHalfView.h"
 #import <FSUIKit.h>
 #import "FSMacro.h"
-#import "FSABSearchController.h"
 
 @interface FSCommonGroupController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -50,25 +49,15 @@
 }
 
 - (void)searchAction{
-    FSABSearchController *search = [[FSABSearchController alloc] init];
-    search.placeholder = self.searchPH;
-    [self.navigationController pushViewController:search animated:YES];
     __weak typeof(self)this = self;
-    search.searchEvent = ^(FSABSearchController *vc, NSString *text) {
-        if (text.length) {
-            [this searchResult:text controller:vc];
+    [FSUIKit alertInput:1 controller:self title:@"搜索想找的内容" message:nil ok:@"搜索" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
+        if (this.searchResult) {
+            UITextField *tf = bAlert.textFields.firstObject;
+            this.searchResult(tf.text);
         }
-    };
-//    search.resultTableView = ^UITableView *(FSABSearchController *searchController) {
-//        FSBestCellView *view = (FSBestCellView *)searchController.resultView;
-//        return view.tableView.tableView;
-//    };
-}
-
-- (void)searchResult:(NSString *)text controller:(FSABSearchController *)controller{
-    if (self.searchResultView) {
-        controller.resultView = self.searchResultView(controller.resultView);
-    }
+    } cancel:@"取消" handler:nil textFieldConifg:^(UITextField *textField) {
+        textField.placeholder = self.searchPH;
+    } completion:nil];
 }
 
 - (void)bbiAction{  //只能增加目录

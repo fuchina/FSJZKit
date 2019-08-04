@@ -25,7 +25,7 @@
 // 查看数据
 @property (nonatomic,copy) void (^seeData)(NSString *zone,NSString *name);
 
-// 搜索结果的视图
-@property (nonatomic,copy) UIView* (^searchResultView) (UIView *view);
+// 搜索内容
+@property (nonatomic,copy) void (^searchResult) (NSString *text);
 
 @end
