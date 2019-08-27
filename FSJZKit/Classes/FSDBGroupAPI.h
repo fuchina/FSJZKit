@@ -37,4 +37,7 @@
 
 + (NSString *)renameModel:(FSDBGroupModel *)model newName:(NSString *)name forTable:(NSString *)table;
 
+// 获取当前目录的model，可以根据zone不断往上获取
++ (FSDBGroupModel *)theGroupModelForZone:(NSString *)zone;
+
 @end

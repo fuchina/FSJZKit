@@ -246,4 +246,16 @@
     return error;
 }
 
++ (FSDBGroupModel *)theGroupModelForZone:(NSString *)zone{
+    if (!zone) {
+        return nil;
+    }
+    NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE time = '%@';",_tb_group,zone];
+    NSArray *list = [FSDBSupport querySQL:sql class:FSDBGroupModel.class tableName:_tb_group];
+//    FSDBGroupModel *theone = list.firstObject;
+//    sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE time = '%@';",_tb_group,theone.link];
+//    list = [FSDBSupport querySQL:sql class:FSDBGroupModel.class tableName:_tb_group];
+    return list.firstObject;
+}
+
 @end
