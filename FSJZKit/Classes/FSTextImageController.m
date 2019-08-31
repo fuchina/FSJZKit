@@ -28,7 +28,7 @@
 }
 
 - (void)shareToWC{
-    [FSPublic shareAction:self view:_mainView];
+    [FSPublic action:(FSPublicActionTypePageShot) view:_mainView controller:self];
 }
 
 - (void)textImageDesignViews{

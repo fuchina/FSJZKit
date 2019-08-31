@@ -14,11 +14,6 @@
 #import "FSUIKit.h"
 #import "FSViewToImage.h"
 
-typedef NS_ENUM(NSInteger, FSPublicActionType) {
-    FSPublicActionTypeScreenShot = 0,
-    FSPublicActionTypePageShot
-};
-
 @implementation FSPublic
 
 + (void)shareAction:(UIViewController *)controller view:(UIScrollView *)scrollView{
