@@ -62,4 +62,23 @@ typedef NS_ENUM(NSInteger, FSPublicActionType) {
     }
 }
 
++ (UIImage *)imageWithSizeWidth:(CGFloat)width height:(CGFloat)height aColorRed:(CGFloat)aRed aColorGreen:(CGFloat)aGreen aColorBlue:(CGFloat)aBlue aColorAlpha:(CGFloat)aAlpha bColorRed:(CGFloat)bRed bColorGreen:(CGFloat)bGreen bColorBlue:(CGFloat)bBlue bColorAlpha:(CGFloat)bAlpha {
+    CGRect frame = CGRectMake(0, 0, width, height);
+    UIImageView *imgview = [[UIImageView alloc] initWithFrame:frame];
+    UIGraphicsBeginImageContext(imgview.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGColorSpaceRef rgb = CGColorSpaceCreateDeviceRGB();
+    CGContextScaleCTM(context, frame.size.width, frame.size.height);
+    CGFloat colors[] = {
+        aRed/255.0, aGreen/255.0, aBlue/255.0, aAlpha,
+        bRed/255.0, bGreen/255.0, bBlue/255.0, bAlpha,
+    };
+    CGGradientRef backGradient = CGGradientCreateWithColorComponents(rgb, colors, NULL, sizeof(colors)/(sizeof(colors[0])*4));
+    CGColorSpaceRelease(rgb);
+    //设置颜色渐变的方向，范围在(0,0)与(1.0,1.0)之间，如(0,0)(1.0,0)代表水平方向渐变,(0,0)(0,1.0)代表竖直方向渐变
+    CGContextDrawLinearGradient(context, backGradient, CGPointMake(0, 0), CGPointMake(1.0, 0), kCGGradientDrawsBeforeStartLocation);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    return image;
+}
+
 @end
