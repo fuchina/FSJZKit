@@ -61,12 +61,12 @@
     
     UILabel *toLabel = [[UILabel alloc] initWithFrame:CGRectMake(textMargin, textTop - 35, _mainView.frame.size.width - textMargin * 2, 25)];
     toLabel.font = font;
-    toLabel.text = @"To 念";
+    toLabel.text = @"To";
     [_mainView addSubview:toLabel];
     
     UILabel *fromLabel = [[UILabel alloc] initWithFrame:CGRectMake(textMargin, _mainView.frame.size.height - 45, _mainView.frame.size.width - textMargin * 2, 25)];
     fromLabel.font = font;
-    fromLabel.text = [[NSString alloc] initWithFormat:@"From 冬 %@",[FSDate stringWithDate:NSDate.date formatter:nil]];
+    fromLabel.text = [[NSString alloc] initWithFormat:@"From %@",[FSDate stringWithDate:NSDate.date formatter:nil]];
     fromLabel.textAlignment = NSTextAlignmentRight;
     [_mainView addSubview:fromLabel];
     

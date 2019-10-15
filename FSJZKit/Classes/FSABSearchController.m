@@ -43,8 +43,16 @@
     tf.delegate = self;
     [_searchView addSubview:tf];
     for (UIView *subview in [[tf.subviews firstObject] subviews]) {
-        if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
-            [subview removeFromSuperview];
+        // iOS 13 解决崩溃问题
+        if (IOSGE(13)) {
+            if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+                  subview.layer.contents = nil;
+                  break;
+              }
+        } else {
+            if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+                [subview removeFromSuperview];
+            }
         }
     }
     
