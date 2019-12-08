@@ -50,7 +50,7 @@
     NSArray *titles = @[@"+",@"-"];
     UIButton *button = nil;
     for (int x = 0; x < 2; x ++) {
-        button = [FSViewManager buttonWithFrame:CGRectMake(x?(WIDTHFC - btnWidth - 20):20, _label.bottom + 10, btnWidth, 44) title:titles[x] titleColor:[UIColor whiteColor] backColor:FSAPPCOLOR fontInt:0 tag:TAG_BUTTON + x target:self selector:@selector(btnClick:)];
+        button = [FSViewManager buttonWithFrame:CGRectMake(x?(WIDTHFC - btnWidth - 20):20, _label.bottom + 10, btnWidth, 44) title:titles[x] titleColor:[UIColor whiteColor] backColor:FSAPPCOLOR font:nil tag:TAG_BUTTON + x target:self selector:@selector(btnClick:)];
         button.layer.cornerRadius = 3;
         [self.scrollView addSubview:button];
     }
