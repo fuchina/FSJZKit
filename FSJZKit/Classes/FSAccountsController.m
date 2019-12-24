@@ -150,7 +150,7 @@
         if (!_fs_isValidateString([FSKit cleanString:textField.text])) {
             return;
         }
-        FSDBMaster *master = [FSDBMaster sharedInstance];
+        FSDBMaster *master = [FSDBMaster openSQLite3];
         NSString *same = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE type = '%@' and name = '%@' and flag = '0'",_tb_abname,@(this.type),textField.text];
         NSArray *list = [master querySQL:same tableName:_tb_abname];
         if (list.count) {
@@ -185,7 +185,7 @@
     if (!([tableName isKindOfClass:NSString.class] && tableName.length)) {
         return;
     }
-    FSDBMaster *master = [FSDBMaster sharedInstance];    
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     NSString *error = [master insert_fields_values:@{
                                                      @"time":@(_fs_integerTimeIntevalSince1970()),
                                                      @"name":name,
@@ -234,7 +234,7 @@
                 return;
             }
             FSABNameModel *model = this.dataSource[indexPath.row];
-            FSDBMaster *master = [FSDBMaster sharedInstance];
+            FSDBMaster *master = [FSDBMaster openSQLite3];
             NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET name = '%@' WHERE aid = %@;",_tb_abname,name,model.aid];
             NSString *error = [master updateSQL:sql];
             if (error) {
@@ -258,7 +258,7 @@
         FSABNameModel *model = self->_dataSource[indexPath.row];
         NSString *name = [[NSString alloc] initWithFormat:@"%@ '%@'?",NSLocalizedString(@"Confirm delete account", nil),model.name];
         [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:name message:nil actionTitles:@[NSLocalizedString(@"Delete", nil)] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
-            FSDBMaster *master = [FSDBMaster sharedInstance];
+            FSDBMaster *master = [FSDBMaster openSQLite3];
             NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET flag = '1' WHERE aid = %@;",_tb_abname,model.aid];
             NSString *error = [master updateSQL:sql];
             if (error) {

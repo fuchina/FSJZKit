@@ -16,7 +16,7 @@
 @implementation FSDBSupport
 
 + (NSMutableArray *)querySQL:(NSString *)sql class:(Class)cname tableName:(NSString *)tableName{
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     NSMutableArray *list = [master querySQL:sql tableName:tableName];
     NSMutableArray *models = [[NSMutableArray alloc] initWithCapacity:list.count];
     for (NSDictionary *dic in list) {
@@ -30,7 +30,7 @@
 
 + (NSMutableArray *)querySQL:(NSString *)sql class:(Class)cname tableName:(NSString *)tableName eachCallback:(void(^)(id model))preCount{
     NSAssert(preCount != nil, @"preCount必须实现才调用这个方法");
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     NSMutableArray *list = [master querySQL:sql tableName:tableName];
     NSMutableArray *models = [[NSMutableArray alloc] initWithCapacity:list.count];
     for (NSDictionary *dic in list) {
@@ -49,7 +49,7 @@
     if (!_fs_isValidateString(table)) {
         return nil;
     }
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     BOOL exist = [master checkTableExist:table];
     if (!exist) {
         return nil;
@@ -165,7 +165,7 @@
         cbed = [[NSString alloc] initWithFormat:@"%@%@",_subject_CB,_ED_KEY];
     }
     NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE (atype = '%@' OR btype = '%@' OR atype = '%@' OR btype = '%@' OR atype = '%@' OR btype = '%@' OR atype = '%@' OR btype = '%@') and cast(time as REAL) BETWEEN %@ AND %@;",table,sring,sring,sred,sred,cbing,cbing,cbed,cbed,@(start),@(end)];
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     NSArray *list = [master querySQL:sql tableName:table];
     CGFloat sr = 0;
     CGFloat cb = 0;
@@ -197,7 +197,7 @@
     if (!checkTable) {
         return @"表不是字符串";
     }
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     NSArray *keys = [master keywords];
     if ([keys containsObject:field]) {
         return @"字段名不能使用关键字";
@@ -234,7 +234,7 @@
     if (!checkTable) {
         return @"表不是字符串";
     }
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     BOOL exist = [master checkTableExist:table];
     if (!exist) {
         return @"表不存在";

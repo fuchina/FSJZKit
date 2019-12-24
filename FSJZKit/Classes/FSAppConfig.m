@@ -25,7 +25,7 @@
     if (![value isKindOfClass:NSString.class]){
         return @"value为空";
     }
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     FSAppConfigModel *model = [self modelForKey:key];
     if (model) {
         if ([value isEqualToString:model.content]) {
@@ -68,7 +68,7 @@
     NSArray *list = [FSDBSupport querySQL:sql class:FSAppConfigModel.class tableName:_tb_appcfg];
     FSAppConfigModel *model = list.firstObject;
     if (model) {
-        FSDBMaster *master = [FSDBMaster sharedInstance];
+        FSDBMaster *master = [FSDBMaster openSQLite3];
         NSString *dSQL = [[NSString alloc] initWithFormat:@"DELETE FROM %@ WHERE aid = %@;",_tb_appcfg,model.aid];
         [master deleteSQL:dSQL];
     }

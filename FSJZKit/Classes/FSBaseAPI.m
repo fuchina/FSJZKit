@@ -25,7 +25,7 @@
         return @"类型不匹配";
     }
     NSString *sql = [[NSString alloc] initWithFormat:@"DELETE FROM %@ WHERE aid = %@;",table,aid];
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     NSString *error = [master deleteSQL:sql];
     return error;
 }
@@ -60,7 +60,7 @@
     NSString *newFreq = @([value integerValue] + 1).stringValue;
     [FSRuntime setValue:newFreq forPropertyName:field ofObject:model];
     NSNumber *aid = [FSRuntime valueForGetSelectorWithPropertyName:@"aid" object:model];
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET %@ = '%@' WHERE aid = %@;",table,field,newFreq,aid];
     NSString *error = [master updateSQL:sql];
     return error;
@@ -71,7 +71,7 @@
         return @"参数错误";
     }
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET %@ = '%@' WHERE aid = %@;",table,field,value,aid];
-    FSDBMaster *master = [FSDBMaster sharedInstance];
+    FSDBMaster *master = [FSDBMaster openSQLite3];
     return [master updateSQL:sql];
 }
 
