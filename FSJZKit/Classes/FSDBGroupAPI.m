@@ -23,7 +23,7 @@
     NSInteger unit = 30;
     NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@  WHERE (link = '%@' and type = '%@') order by cast(freq as INTEGER) DESC limit %@,%@;",_tb_group,link,type,@(page * unit),@(unit)];
     NSMutableArray *list = [FSDBSupport querySQL:sql class:FSDBGroupModel.class tableName:_tb_group];
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     for (FSDBGroupModel *m in list) {
         NSString *cs = [[NSString alloc] initWithFormat:@"select count(*) from %@ Where zone = '%@';",type,m.time];
         NSInteger count = [master countWithSQL:cs table:type];
@@ -42,7 +42,7 @@
     if (!_fs_isValidateString(link)) {
         link = @"-1";
     }
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSInteger time = _fs_integerTimeIntevalSince1970();
     NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE type = '%@' and time = '%@';",_tb_group,type,@(time)];
     NSArray *list = [master querySQL:sql tableName:_tb_group];
@@ -68,7 +68,7 @@
     if (!(_fs_isValidateString(table) && _fs_isValidateString(group))) {
         return NO;
     }
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE zone = '%@' limit 0,1;",table,group];
     NSArray *list = [master querySQL:sql tableName:table];
     return list.count;
@@ -98,7 +98,7 @@
     if (!(_fs_isValidateString(table) && _fs_isValidateString(zone))) {
         return NO;
     }
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE zone = '%@';",table,zone];
     NSArray *list = [master querySQL:sql tableName:table];
     
@@ -115,7 +115,7 @@
     if (!_fs_isValidateString(table)) {
         return nil;
     }
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ Where type = '%@' limit 0,300;",_tb_group,table];
     NSMutableArray *array = [master querySQL:sql tableName:_tb_group];
     NSMutableArray *ds = [[NSMutableArray alloc] init];
@@ -144,7 +144,7 @@
     }
     NSInteger freq = [model.freq integerValue] + 1;
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET freq = '%@' WHERE aid = %@;",_tb_group,@(freq),model.aid];
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     [master updateSQL:sql];
     // [master updateWithSQL:sql];
 }
@@ -153,7 +153,7 @@
     if (!_fs_isValidateString(table)) {
         return nil;
     }
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *text = [self mapOfTable:table];
     NSString *title = [[NSString alloc] initWithFormat:@"%@(%@)",text,@([master countForTable:table])];
     return title;
@@ -180,7 +180,7 @@
     if (!(_fs_isValidateString(table) && [model isKindOfClass:FSDBGroupModel.class])) {
         return nil;
     }
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ Where type = '%@' order by cast(freq as INTEGER) DESC limit 0,500;",_tb_group,table];
     NSMutableArray *array = [master querySQL:sql tableName:_tb_group]; // 这是所有的组
     NSMutableArray *needDeletes = [[NSMutableArray alloc] init];
@@ -229,7 +229,7 @@
         return @"不可以更改到这一组";
     }
     NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET link = '%@' WHERE aid = %@;",_tb_group,zone,model.aid];
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *error = [master updateSQL:sql];
     // NSString *error = [master updateWithSQL:sql];
     return error;
@@ -239,7 +239,7 @@
     if ((![model isKindOfClass:FSDBGroupModel.class]) || (!_fs_isValidateString(name)) || (!_fs_isValidateString(table))) {
         return @"Params error";
     }
-    FSDBMaster *master = [FSDBMaster openSQLite3];
+    FSDBMaster *master = [FSDBMaster sharedInstance];
     NSString *select = [[NSString alloc] initWithFormat:@"UPDATE %@ SET name = '%@' WHERE (type = '%@' and aid = %@);",_tb_group,name,table,model.aid];
     NSString *error = [master updateSQL:select];
     // NSString *error = [master updateWithSQL:select];
