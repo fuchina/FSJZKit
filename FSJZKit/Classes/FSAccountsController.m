@@ -117,7 +117,7 @@
 
 - (void)twoMinutesLearnAccount{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(0, HEIGHTFC - 44 - (FS_iPhone_X?34:0), WIDTHFC, 44);
+    button.frame = CGRectMake(0, HEIGHTFC - 44 - (_fs_isIPhoneX()?34:0), WIDTHFC, 44);
     [button setTitle:NSLocalizedString(@"Learn to bookkeeping in two minutes", nil) forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     button.backgroundColor = FSAPPCOLOR;
