@@ -145,7 +145,7 @@
 
 - (void)bbiAction{
     __weak typeof(self)this = self;
-    [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Add a new account", nil) message:nil ok:NSLocalizedString(@"Add", nil) handler:^(UIAlertController *bAlert, UIAlertAction *action) {
+    [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Add a new account", nil) message:nil ok:@"增加" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
         UITextField *textField = [bAlert.textFields firstObject];
         if (!_fs_isValidateString([FSKit cleanString:textField.text])) {
             return;
@@ -166,7 +166,7 @@
         }
         [this createAccountBook:tableName name:textField.text];
         [this accNameHandleDatas];
-    } cancel:NSLocalizedString(@"Cancel", nil) handler:nil textFieldConifg:^(UITextField *textField) {
+    } cancel:@"取消" handler:nil textFieldConifg:^(UITextField *textField) {
         NSDateComponents *c = [FSDate componentForDate:[NSDate date]];
         textField.placeholder = [[NSString alloc] initWithFormat:@"如'%@'",@(c.year)];
     } completion:nil];
@@ -220,14 +220,14 @@
     FSABNameModel *model = _dataSource[indexPath.row];
     cell.textLabel.text = model.name;
 //    NSString *text = [FSAPP messageForTable:model.tb];
-//    cell.detailTextLabel.text = text?:NSLocalizedString(@"Nothing", nil);
+//    cell.detailTextLabel.text = text?:@"暂无";
     return cell;
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewRowAction *action0 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"Rename", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         __weak typeof(self)this = self;
-        [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Name the account a new one", nil) message:nil ok:NSLocalizedString(@"Confirm", nil) handler:^(UIAlertController *bAlert, UIAlertAction *action) {
+        [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Name the account a new one", nil) message:nil ok:@"确认" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
             NSString *name =  [bAlert.textFields.firstObject.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             if (name.length == 0) {
                 [FSToast show:NSLocalizedString(@"Please input", nil)];
@@ -243,7 +243,7 @@
                 model.name = name;
                 [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
             }
-        } cancel:NSLocalizedString(@"Cancel", nil) handler:^(UIAlertAction *action) {
+        } cancel:@"取消" handler:^(UIAlertAction *action) {
             tableView.editing = NO;
         } textFieldConifg:^(UITextField *textField) {
             textField.placeholder = NSLocalizedString(@"Input new name", nil);
@@ -254,10 +254,10 @@
     }];
     action0.backgroundColor = THISCOLOR;
     
-    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:NSLocalizedString(@"Delete", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         FSABNameModel *model = self->_dataSource[indexPath.row];
         NSString *name = [[NSString alloc] initWithFormat:@"%@ '%@'?",NSLocalizedString(@"Confirm delete account", nil),model.name];
-        [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:name message:nil actionTitles:@[NSLocalizedString(@"Delete", nil)] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
+        [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:name message:nil actionTitles:@[@"删除"] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
             FSDBMaster *master = [FSDBMaster sharedInstance];
             NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET flag = '1' WHERE aid = %@;",_tb_abname,model.aid];
             NSString *error = [master updateSQL:sql];
@@ -266,7 +266,7 @@
                 return;
             }
             [self accNameHandleDatas];
-        } cancelTitle:NSLocalizedString(@"Cancel", nil) cancel:^(UIAlertAction *action) {
+        } cancelTitle:@"取消" cancel:^(UIAlertAction *action) {
             tableView.editing = NO;
         } completion:nil];
     }];

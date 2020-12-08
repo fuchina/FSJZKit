@@ -76,11 +76,11 @@
 
 + (NSString *)dayMonthYearForNumber:(CGFloat)number{
     if (number > 365) {
-        return [[NSString alloc] initWithFormat:@"%.2f%@",number / 365.0,NSLocalizedString(@"year", nil)];
+        return [[NSString alloc] initWithFormat:@"%.2f%@",number / 365.0,@"年"];
     }else if (number > 30){
-        return [[NSString alloc] initWithFormat:@"%.2f%@",number / 30,NSLocalizedString(@"month", nil)];
+        return [[NSString alloc] initWithFormat:@"%.2f%@",number / 30,@"月"];
     }else{
-        return [[NSString alloc] initWithFormat:@"%.2f%@",number,NSLocalizedString(@"day", nil)];
+        return [[NSString alloc] initWithFormat:@"%.2f%@",number,@"天"];
     }
 }
 

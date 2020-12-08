@@ -93,7 +93,7 @@
 
 - (void)addZoneActionIn:(NSString *)link completion:(void (^)(void))completion{
     __weak typeof(self)this = self;
-    [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Add group", nil) message:nil ok:NSLocalizedString(@"Add", nil) handler:^(UIAlertController *bAlert, UIAlertAction *action) {
+    [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Add group", nil) message:nil ok:@"增加" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
         NSString *zone = bAlert.textFields.firstObject.text;
         if ([FSKit cleanString:zone].length == 0) {
             [FSToast show:NSLocalizedString(@"Please input group name", nil)];
@@ -107,7 +107,7 @@
         if (completion) {
             completion();
         }
-    } cancel:NSLocalizedString(@"Cancel", nil) handler:nil textFieldConifg:^(UITextField *textField) {
+    } cancel:@"取消" handler:nil textFieldConifg:^(UITextField *textField) {
         textField.placeholder = NSLocalizedString(@"Please input group name", nil);
     } completion:nil];
 }
@@ -210,7 +210,7 @@
         [edits addObject:action0];
     }
     if (canDelete) {
-        UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"Delete", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
             FSDBGroupModel *model = [self->_list objectAtIndex:indexPath.row];
             [FSDBGroupAPI deleteModelBusiness:model table:_tb_group controller:self success:^{
                 [self.list removeObjectAtIndex:indexPath.row];
@@ -296,7 +296,7 @@
             }
             NSString *z = dic[@"name"];
             NSString *message = [[NSString alloc] initWithFormat:@"确定将'%@'组换到'%@'组下?",this.model.name,z];
-            [FSUIKit alert:UIAlertControllerStyleActionSheet controller:this title:nil message:message actionTitles:@[NSLocalizedString(@"Confirm", nil)] styles:@[@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
+            [FSUIKit alert:UIAlertControllerStyleActionSheet controller:this title:nil message:message actionTitles:@[@"确认"] styles:@[@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
                 NSString *error = [FSDBGroupAPI changeModel:this.model toZone:zone table:this.table];
                 if (!error) {
                     [this commonGroupHandleDatas];

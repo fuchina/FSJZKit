@@ -19,7 +19,7 @@
 + (void)shareAction:(UIViewController *)controller view:(UIScrollView *)scrollView{
     NSString *screenShot = @"屏幕截图";
     NSString *pageShot = @"页面截图";
-    [FSUIKit alert:UIAlertControllerStyleAlert controller:controller title:NSLocalizedString(@"Share screenshot to Wechat?", nil) message:nil actionTitles:@[pageShot,screenShot] styles:@[@(UIAlertActionStyleDefault),@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
+    [FSUIKit alert:UIAlertControllerStyleAlert controller:controller title:@"分享图片给好友" message:nil actionTitles:@[pageShot,screenShot] styles:@[@(UIAlertActionStyleDefault),@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
         if ([action.title isEqualToString:screenShot]) {
             [self action:0 view:scrollView controller:controller];
         }else if ([action.title isEqualToString:pageShot]){
