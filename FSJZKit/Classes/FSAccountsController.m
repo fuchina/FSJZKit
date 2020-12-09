@@ -230,7 +230,7 @@
         [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Name the account a new one", nil) message:nil ok:@"确认" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
             NSString *name =  [bAlert.textFields.firstObject.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             if (name.length == 0) {
-                [FSToast show:NSLocalizedString(@"Please input", nil)];
+                [FSToast show:@"请输入"];
                 return;
             }
             FSABNameModel *model = this.dataSource[indexPath.row];

@@ -34,7 +34,7 @@
     if (![controller isKindOfClass:UIViewController.class]) {
         return;
     }
-    [FSUIKit alert:UIAlertControllerStyleActionSheet controller:controller title:NSLocalizedString(@"Cannot recover after deletion", nil) message:nil actionTitles:@[@"删除"] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
+    [FSUIKit alert:UIAlertControllerStyleActionSheet controller:controller title:@"删除后无法恢复" message:nil actionTitles:@[@"删除"] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
         NSString *error = [self deleteModel:model table:table];
         if (!error) {
             if (success) {
