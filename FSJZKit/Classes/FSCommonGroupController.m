@@ -93,10 +93,10 @@
 
 - (void)addZoneActionIn:(NSString *)link completion:(void (^)(void))completion{
     __weak typeof(self)this = self;
-    [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Add group", nil) message:nil ok:@"增加" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
+    [FSUIKit alertInput:1 controller:self title:@"增加组" message:nil ok:@"增加" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
         NSString *zone = bAlert.textFields.firstObject.text;
         if ([FSKit cleanString:zone].length == 0) {
-            [FSToast show:NSLocalizedString(@"Please input group name", nil)];
+            [FSToast show:@"请输入组名"];
             return;
         }
         NSString *error = [FSDBGroupAPI addGroup:zone type:this.table link:link];
@@ -108,7 +108,7 @@
             completion();
         }
     } cancel:@"取消" handler:nil textFieldConifg:^(UITextField *textField) {
-        textField.placeholder = NSLocalizedString(@"Please input group name", nil);
+        textField.placeholder = @"请输入组名";
     } completion:nil];
 }
 
@@ -202,7 +202,7 @@
     
     NSMutableArray *edits = [[NSMutableArray alloc] init];
     if (canMove) {
-        UITableViewRowAction *action0 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"Move", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        UITableViewRowAction *action0 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"移动" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
             tableView.editing = NO;
             [self showHalfView:model];
         }];
@@ -224,7 +224,7 @@
         [edits insertObject:action1 atIndex:0];
     }
     
-    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"Rename", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"重命名" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         FSDBGroupModel *model = [self->_list objectAtIndex:indexPath.row];
         [self rename:model];
         tableView.editing = NO;

@@ -30,12 +30,12 @@
 }
 
 - (void)recordDesignViews{
-    _control = [[UISegmentedControl alloc] initWithItems:@[NSLocalizedString(@"Hour", nil),NSLocalizedString(@"Minute", nil),NSLocalizedString(@"Second", nil)]];
+    _control = [[UISegmentedControl alloc] initWithItems:@[@"时数",@"分数",@"秒数"]];
     _control.selectedSegmentIndex = 0;
     _control.frame = CGRectMake(0, 4, 100, 36);
     self.navigationItem.titleView = _control;
     
-    UIBarButtonItem *bbi = [FSViewManager bbiWithTitle:NSLocalizedString(@"Date", nil) target:self action:@selector(bbiAction)];
+    UIBarButtonItem *bbi = [FSViewManager bbiWithTitle:@"日期" target:self action:@selector(bbiAction)];
     self.navigationItem.rightBarButtonItem = bbi;
     
     NSString *text = _fs_userDefaults_objectForKey(NSStringFromClass(self.class));

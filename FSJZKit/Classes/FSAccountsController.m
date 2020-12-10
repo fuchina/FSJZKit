@@ -37,7 +37,7 @@
 }
 
 - (void)mailAction{
-    [FSShare emailShareWithSubject:NSLocalizedString(@"Questions about account", nil) on:self messageBody:nil recipients:@[_feedback_Email] fileData:nil fileName:nil mimeType:nil];
+    [FSShare emailShareWithSubject:@"账本相关问题" on:self messageBody:nil recipients:@[_feedback_Email] fileData:nil fileName:nil mimeType:nil];
 }
 
 - (void)accountExplain{
@@ -80,7 +80,7 @@
 
 - (void)accNameDesignViews{
     if (!_tableView) {
-        self.title = NSLocalizedString(@"Account", nil);
+        self.title = @"账本";
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [button addTarget:self action:@selector(accountExplain) forControlEvents:UIControlEventTouchUpInside];
@@ -118,7 +118,7 @@
 - (void)twoMinutesLearnAccount{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(0, HEIGHTFC - 44 - (_fs_isIPhoneX()?34:0), WIDTHFC, 44);
-    [button setTitle:NSLocalizedString(@"Learn to bookkeeping in two minutes", nil) forState:UIControlStateNormal];
+    [button setTitle:@"两分钟学会记账" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     button.backgroundColor = FSAPPCOLOR;
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -128,7 +128,7 @@
 - (void)buttonClick{
 //    NetworkStatus status = [FSKitDuty networkStatus];
 //    if (status == ReachableViaWWAN) {
-//        [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:NSLocalizedString(@"You are using WWAN, and watch it?", nil) message:nil actionTitles:@[NSLocalizedString(@"Watch", nil)] styles:@[@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
+//        [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:(@"You are using WWAN, and watch it?", nil) message:nil actionTitles:@[(@"Watch", nil)] styles:@[@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
 //            [self seeTheVideo];
 //        }];
 //    }else{
@@ -145,7 +145,7 @@
 
 - (void)bbiAction{
     __weak typeof(self)this = self;
-    [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Add a new account", nil) message:nil ok:@"增加" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
+    [FSUIKit alertInput:1 controller:self title:@"添加一个新账本" message:nil ok:@"增加" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
         UITextField *textField = [bAlert.textFields firstObject];
         if (!_fs_isValidateString([FSKit cleanString:textField.text])) {
             return;
@@ -154,14 +154,14 @@
         NSString *same = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE type = '%@' and name = '%@' and flag = '0'",_tb_abname,@(this.type),textField.text];
         NSArray *list = [master querySQL:same tableName:_tb_abname];
         if (list.count) {
-            [FSToast show:NSLocalizedString(@"The same name exists", nil)];
+            [FSToast show:@"已存在同名账本"];
             return;
         }
         NSInteger count = [master countForTable:_tb_abname];
         NSString *tableName = [this accountTable:count];
         BOOL exist = [master checkTableExist:tableName];
         if (exist) {
-            [FSToast toast:NSLocalizedString(@"The account exists", nil)];
+            [FSToast toast:@"账本已存在"];
             return;
         }
         [this createAccountBook:tableName name:textField.text];
@@ -179,7 +179,7 @@
 
 - (void)createAccountBook:(NSString *)tableName name:(NSString *)name {
     if (!([name isKindOfClass:NSString.class] && name.length)) {
-        [FSToast show:NSLocalizedString(@"Please input account name", nil)];
+        [FSToast show:@"请输入账本名"];
         return;
     }
     if (!([tableName isKindOfClass:NSString.class] && tableName.length)) {
@@ -225,9 +225,9 @@
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewRowAction *action0 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"Rename", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+    UITableViewRowAction *action0 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"重命名" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         __weak typeof(self)this = self;
-        [FSUIKit alertInput:1 controller:self title:NSLocalizedString(@"Name the account a new one", nil) message:nil ok:@"确认" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
+        [FSUIKit alertInput:1 controller:self title:@"给账本换个新名字" message:nil ok:@"确认" handler:^(UIAlertController *bAlert, UIAlertAction *action) {
             NSString *name =  [bAlert.textFields.firstObject.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             if (name.length == 0) {
                 [FSToast show:@"请输入"];
@@ -246,7 +246,7 @@
         } cancel:@"取消" handler:^(UIAlertAction *action) {
             tableView.editing = NO;
         } textFieldConifg:^(UITextField *textField) {
-            textField.placeholder = NSLocalizedString(@"Input new name", nil);
+            textField.placeholder = @"输入一个新名字";
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
             FSABNameModel *model = this.dataSource[indexPath.row];
             textField.text = model.name;
@@ -256,7 +256,7 @@
     
     UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         FSABNameModel *model = self->_dataSource[indexPath.row];
-        NSString *name = [[NSString alloc] initWithFormat:@"%@ '%@'?",NSLocalizedString(@"Confirm delete account", nil),model.name];
+        NSString *name = [[NSString alloc] initWithFormat:@"%@ '%@'?",@"确定删除账本",model.name];
         [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:name message:nil actionTitles:@[@"删除"] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
             FSDBMaster *master = [FSDBMaster sharedInstance];
             NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET flag = '1' WHERE aid = %@;",_tb_abname,model.aid];
