@@ -61,7 +61,7 @@ static NSString     *_Notifi_registerLocalNotification = @"_Notifi_registerLocal
 static NSString     *_Notifi_DetailUpdateCacheData = @"_Notifi_DetailUpdateCacheData";             // 自定义账本数据更新通知
 
 /**********************************************************************************************/
-static NSString *_feedback_Email            = @"fuswift@163.com";
+static NSString *_feedback_Email            = @"1245102331@qq.com";
 
 /**********************************************************************************************/
 
