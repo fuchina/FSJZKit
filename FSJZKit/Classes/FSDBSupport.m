@@ -11,7 +11,6 @@
 #import "FSTuple.h"
 #import "FSDate.h"
 #import "FSRuntime.h"
-#import "FSFile.h"
 
 @implementation FSDBSupport
 
