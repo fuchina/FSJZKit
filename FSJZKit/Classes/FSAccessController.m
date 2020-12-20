@@ -32,7 +32,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     CGSize size = [UIScreen mainScreen].bounds.size;
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, size.width, size.height - 64) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _fs_statusAndNavigatorHeight(), size.width, size.height - _fs_statusAndNavigatorHeight()) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor clearColor];
