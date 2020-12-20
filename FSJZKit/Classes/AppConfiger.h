@@ -14,7 +14,7 @@ static NSString *_Watch_Account  = @"";
 static NSString *_appCfg_receivedEmail = @"cfgEmail";   // 文件导出的接收邮箱
 static NSString *_appCfg_pdfPassword = @"cfgpdf";       // 导出的Pdf文件的密码
 static NSString *_appCfg_lockTime = @"cfglock";         // app退到后台需要重新输入密码的时间
-static NSString *_appCfg_ttsSwitch = @"ttsSwitch";              // 语音播放开关
+static NSString *_appCfg_speak = @"speak";              // 语音播放开关
 static NSString *_appCfg_exportSwitch = @"exportSwitch";        // 导出文件开关
 
 #endif /* AppConfiger_h */
