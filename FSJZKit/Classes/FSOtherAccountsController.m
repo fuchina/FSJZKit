@@ -85,14 +85,12 @@
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewRowAction *action0 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"恢复显示" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        [FSUIKit alert:(UIAlertControllerStyleActionSheet) controller:self title:@"恢复显示到列表中" message:nil actionTitles:@[@"恢复"] styles:@[@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
-            FSABNameModel *model = self->_dataSource[indexPath.row];
-            NSString *error = [FSAccountsAPI hideAccount:model.aid hidden:NO];
-            if (error) {
-                [FSToast show:error];return;
-            }
-            [self otherAccountsHandleDatas];
-        }];
+        FSABNameModel *model = self->_dataSource[indexPath.row];
+        NSString *error = [FSAccountsAPI hideAccount:model.aid hidden:NO];
+        if (error) {
+            [FSToast show:error];return;
+        }
+        [self otherAccountsHandleDatas];
     }];
     action0.backgroundColor = THISCOLOR;
     
