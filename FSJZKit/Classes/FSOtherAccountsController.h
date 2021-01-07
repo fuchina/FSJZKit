@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FSOtherAccountsController : FSBaseController
 
+@property (nonatomic, assign) NSInteger     type;
+
+@property (nonatomic,copy) void (^push)(NSString *table, NSString *name);  // push
+
 @end
 
 NS_ASSUME_NONNULL_END

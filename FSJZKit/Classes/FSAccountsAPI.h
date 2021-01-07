@@ -17,11 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)addAccount:(NSString *)account type:(NSInteger)type;
 
-+ (NSString *)hideAccount:(NSNumber *)aid;
++ (NSString *)hideAccount:(NSNumber *)aid hidden:(BOOL)hidden;
 
 + (NSString *)renameAccount:(NSString *)name aid:(NSNumber *)aid;
 
-+ (void)otherAccounts:(void(^)(NSArray<FSABNameModel *> *list))otherAccounts;
++ (NSString *)deleteAccount:(NSNumber *)aid table:(NSString *)table;
+
++ (void)otherAccounts:(NSInteger)page type:(NSInteger)type results:(void(^)(NSArray<FSABNameModel *> *list))otherAccounts;
 
 @end
 

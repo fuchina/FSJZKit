@@ -69,9 +69,9 @@
     return error;
 }
 
-+ (NSString *)hideAccount:(NSNumber *)aid {
++ (NSString *)hideAccount:(NSNumber *)aid hidden:(BOOL)hidden {
     FSDBMaster *master = [FSDBMaster sharedInstance];
-    NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET flag = '1' WHERE aid = %@;",_tb_abname,aid];
+    NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET flag = '%d' WHERE aid = %@;",_tb_abname,hidden ? 1: 0,aid];
     NSString *error = [master updateSQL:sql];
     return error;
 }
@@ -83,11 +83,28 @@
     return error;
 }
 
-+ (void)otherAccounts:(void(^)(NSArray<FSABNameModel *> *list))otherAccounts {
-    
-    if (otherAccounts) {
-        otherAccounts(nil);
++ (NSString *)deleteAccount:(NSNumber *)aid table:(NSString *)table {
+    FSDBMaster *master = [FSDBMaster sharedInstance];
+    BOOL exist = [master checkTableExist:table];
+    if (exist) {
+        NSString *error = [master dropTable:table];
+        if (error) {
+            return error;
+        }
     }
+    NSString *error = [master deleteSQL:_tb_abname aid:aid];
+    return error;
+}
+
++ (void)otherAccounts:(NSInteger)page type:(NSInteger)type results:(void(^)(NSArray<FSABNameModel *> *list))otherAccounts {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger unit = 50;
+        NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE type = '%@' and flag = '1' order by cast(freq as INTEGER) DESC limit %@,%@;",_tb_abname,@(type),@(unit * page),@(unit)];
+        NSMutableArray *list = [FSDBSupport querySQL:sql class:FSABNameModel.class tableName:_tb_abname];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            otherAccounts(list);
+        });
+    });
 }
 
 @end

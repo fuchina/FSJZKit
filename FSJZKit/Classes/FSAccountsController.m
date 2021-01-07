@@ -47,9 +47,8 @@
                 });
             }
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self accNameDesignViews];
-        });
+        
+        [self accNameDesignViews];
     }];
 }
 
@@ -85,6 +84,8 @@
 
 - (void)allData {
     FSOtherAccountsController *other = [[FSOtherAccountsController alloc] init];
+    other.type = self.type;
+    other.push = self.push;
     [self.navigationController pushViewController:other animated:YES];
 }
 
@@ -125,8 +126,6 @@
     }
     FSABNameModel *model = _dataSource[indexPath.row];
     cell.textLabel.text = model.name;
-//    NSString *text = [FSAPP messageForTable:model.tb];
-//    cell.detailTextLabel.text = text?:@"暂无";
     return cell;
 }
 
@@ -158,19 +157,14 @@
     }];
     action0.backgroundColor = THISCOLOR;
     
-    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"不显示" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         FSABNameModel *model = self->_dataSource[indexPath.row];
-        NSString *name = [[NSString alloc] initWithFormat:@"%@ '%@'?",@"确定删除账本",model.name];
-        [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:name message:nil actionTitles:@[@"删除"] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
-            NSString *error = [FSAccountsAPI hideAccount:model.aid];
-            if (error) {
-                [FSUIKit showAlertWithMessage:error controller:self];
-                return;
-            }
-            [self accNameHandleDatas];
-        } cancelTitle:@"取消" cancel:^(UIAlertAction *action) {
-            tableView.editing = NO;
-        } completion:nil];
+        NSString *error = [FSAccountsAPI hideAccount:model.aid hidden:YES];
+        if (error) {
+            [FSUIKit showAlertWithMessage:error controller:self];
+            return;
+        }
+        [self accNameHandleDatas];
     }];
     return @[action1, action0];
 }
