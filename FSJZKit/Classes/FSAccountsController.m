@@ -10,16 +10,15 @@
 #import "FSDBSupport.h"
 #import <MessageUI/MessageUI.h>
 #import "FSABNameModel.h"
-//#import "FSHTMLController.h"
 #import "FSShare.h"
 #import <MJRefresh.h>
 #import "UIViewController+BackButtonHandler.h"
-//#import "FSWebKitController.h"
 #import "AppConfiger.h"
 #import "FSBaseAPI.h"
 #import <FSUIKit.h>
 #import <FSDate.h>
-//#import "FSKitDuty.h"
+#import "FSOtherAccountsController.h"
+#import "FSAccountsAPI.h"
 
 @interface FSAccountsController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -36,26 +35,8 @@
     [self accNameHandleDatas];
 }
 
-- (void)mailAction{
-    [FSShare emailShareWithSubject:@"账本相关问题" on:self messageBody:nil recipients:@[_feedback_Email] fileData:nil fileName:nil mimeType:nil];
-}
-
-- (void)accountExplain{
-//    [self event:_UMeng_Event_acc_show];
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"note" ofType:@"pdf"];
-//    FSHTMLController *html = [[FSHTMLController alloc] init];
-//    html.title = @"说明";
-//    html.localUrlString = path;
-//    [self.navigationController pushViewController:html animated:YES];
-    
-//    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(mailAction)];
-//    html.navigationItem.rightBarButtonItem = bbi;
-}
-
-- (void)accNameHandleDatas{    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *sql = [self sql:self->_page];
-        NSMutableArray *list = [FSDBSupport querySQL:sql class:FSABNameModel.class tableName:_tb_abname];
+- (void)accNameHandleDatas{
+    [FSAccountsAPI accounts:self.page type:_type results:^(NSMutableArray<FSABNameModel *> * _Nonnull list) {
         if (self.page) {
             [self.dataSource addObjectsFromArray:list];
         }else{
@@ -69,29 +50,16 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self accNameDesignViews];
         });
-    });
-}
-
-- (NSString *)sql:(NSInteger)page{
-    NSInteger unit = 50;
-    NSString *sql = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE type = '%@' and flag = '0' order by cast(freq as INTEGER) DESC limit %@,%@;",_tb_abname,@(_type),@(unit * page),@(unit)];
-    return sql;
+    }];
 }
 
 - (void)accNameDesignViews{
     if (!_tableView) {
         self.title = @"账本";
-        
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        [button addTarget:self action:@selector(accountExplain) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *mail = [[UIBarButtonItem alloc] initWithCustomView:button];
-        
+                
         UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
-        if (self.type == 2) {
-            self.navigationItem.rightBarButtonItems = @[bbi,mail];
-        }else{
-            self.navigationItem.rightBarButtonItem = bbi;
-        }
+        UIBarButtonItem *lists = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(allData)];
+        self.navigationItem.rightBarButtonItems = @[bbi,lists];
         
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _fs_statusAndNavigatorHeight(), WIDTHFC, HEIGHTFC - _fs_statusAndNavigatorHeight() - _fs_tabbarBottomMoreHeight()) style:UITableViewStylePlain];
         _tableView.delegate = self;
@@ -115,32 +83,9 @@
     }
 }
 
-- (void)twoMinutesLearnAccount{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(0, HEIGHTFC - 44 - (_fs_isIPhoneX()?34:0), WIDTHFC, 44);
-    [button setTitle:@"两分钟学会记账" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.backgroundColor = FSAPPCOLOR;
-    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-}
-
-- (void)buttonClick{
-//    NetworkStatus status = [FSKitDuty networkStatus];
-//    if (status == ReachableViaWWAN) {
-//        [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:(@"You are using WWAN, and watch it?", nil) message:nil actionTitles:@[(@"Watch", nil)] styles:@[@(UIAlertActionStyleDefault)] handler:^(UIAlertAction *action) {
-//            [self seeTheVideo];
-//        }];
-//    }else{
-//        [self seeTheVideo];
-//    }
-}
-
-- (void)seeTheVideo{
-//    FSWebKitController *webController = [[FSWebKitController alloc] init];
-//    webController.urlString = _Watch_Account;
-//    [self.navigationController pushViewController:webController animated:YES];
-//    [self event:_UMeng_Event_watch_video];
+- (void)allData {
+    FSOtherAccountsController *other = [[FSOtherAccountsController alloc] init];
+    [self.navigationController pushViewController:other animated:YES];
 }
 
 - (void)bbiAction{
@@ -150,55 +95,16 @@
         if (!_fs_isValidateString([FSKit cleanString:textField.text])) {
             return;
         }
-        FSDBMaster *master = [FSDBMaster sharedInstance];
-        NSString *same = [[NSString alloc] initWithFormat:@"SELECT * FROM %@ WHERE type = '%@' and name = '%@' and flag = '0'",_tb_abname,@(this.type),textField.text];
-        NSArray *list = [master querySQL:same tableName:_tb_abname];
-        if (list.count) {
-            [FSToast show:@"已存在同名账本"];
-            return;
+        NSString *error = [FSAccountsAPI addAccount:textField.text type:this.type];
+        if (error) {
+            [FSToast show:error];
+        } else {
+            [this accNameHandleDatas];
         }
-        NSInteger count = [master countForTable:_tb_abname];
-        NSString *tableName = [this accountTable:count];
-        BOOL exist = [master checkTableExist:tableName];
-        if (exist) {
-            [FSToast toast:@"账本已存在"];
-            return;
-        }
-        [this createAccountBook:tableName name:textField.text];
-        [this accNameHandleDatas];
     } cancel:@"取消" handler:nil textFieldConifg:^(UITextField *textField) {
         NSDateComponents *c = [FSDate componentForDate:[NSDate date]];
         textField.placeholder = [[NSString alloc] initWithFormat:@"如'%@'",@(c.year)];
     } completion:nil];
-}
-
-- (NSString *)accountTable:(NSInteger)count{
-    NSString *tableName = [[NSString alloc] initWithFormat:@"%@%@",_SPEC_FLAG_A,@(count)];
-    return tableName;
-}
-
-- (void)createAccountBook:(NSString *)tableName name:(NSString *)name {
-    if (!([name isKindOfClass:NSString.class] && name.length)) {
-        [FSToast show:@"请输入账本名"];
-        return;
-    }
-    if (!([tableName isKindOfClass:NSString.class] && tableName.length)) {
-        return;
-    }
-    FSDBMaster *master = [FSDBMaster sharedInstance];
-    NSString *error = [master insert_fields_values:@{
-                                                     @"time":@(_fs_integerTimeIntevalSince1970()),
-                                                     @"name":name,
-                                                     @"tb":tableName,
-                                                     @"type":@(_type),
-                                                     @"freq":@0,
-                                                     @"flag":@0
-                                                     } table:_tb_abname];
-    
-    if (error) {
-        [FSUIKit showAlertWithMessage:error controller:self];
-        return;
-    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -234,9 +140,7 @@
                 return;
             }
             FSABNameModel *model = this.dataSource[indexPath.row];
-            FSDBMaster *master = [FSDBMaster sharedInstance];
-            NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET name = '%@' WHERE aid = %@;",_tb_abname,name,model.aid];
-            NSString *error = [master updateSQL:sql];
+            NSString *error = [FSAccountsAPI renameAccount:name aid:model.aid];
             if (error) {
                 [FSToast show:error];
             }else{
@@ -258,9 +162,7 @@
         FSABNameModel *model = self->_dataSource[indexPath.row];
         NSString *name = [[NSString alloc] initWithFormat:@"%@ '%@'?",@"确定删除账本",model.name];
         [FSUIKit alert:UIAlertControllerStyleActionSheet controller:self title:name message:nil actionTitles:@[@"删除"] styles:@[@(UIAlertActionStyleDestructive)] handler:^(UIAlertAction *action) {
-            FSDBMaster *master = [FSDBMaster sharedInstance];
-            NSString *sql = [[NSString alloc] initWithFormat:@"UPDATE %@ SET flag = '1' WHERE aid = %@;",_tb_abname,model.aid];
-            NSString *error = [master updateSQL:sql];
+            NSString *error = [FSAccountsAPI hideAccount:model.aid];
             if (error) {
                 [FSUIKit showAlertWithMessage:error controller:self];
                 return;
@@ -282,15 +184,6 @@
     if (self.push) {
         self.push(model.tb, model.name);
     }
-    [self updateFreq:model];
-    
-    //        FSABCompanyOverviewController *company = [[FSABCompanyOverviewController alloc] init];
-    //        company.accountName = model.tb;
-    //        company.title = model.name;
-    //        [self.navigationController pushViewController:company animated:YES];
-}
-
-- (void)updateFreq:(FSABNameModel *)model{
     [FSBaseAPI addFreq:_tb_abname field:@"freq" model:model];
 }
 
