@@ -34,19 +34,13 @@
     if (list.count) {
         return @"已存在同名账本";
     }
-    NSInteger count = [master countForTable:_tb_abname];
-    NSString *tableName = [self accountTable:count];
+    NSString *tableName = [[NSString alloc] initWithFormat:@"%@%@",_SPEC_FLAG_A,@(_fs_integerTimeIntevalSince1970())];
     BOOL exist = [master checkTableExist:tableName];
     if (exist) {
         return @"账本已存在";
     }
     
     return [self createAccountBook:tableName name:account type:type];
-}
-
-+ (NSString *)accountTable:(NSInteger)count{
-    NSString *tableName = [[NSString alloc] initWithFormat:@"%@%@",_SPEC_FLAG_A,@(count)];
-    return tableName;
 }
 
 + (NSString *)createAccountBook:(NSString *)tableName name:(NSString *)name type:(NSInteger)type {
